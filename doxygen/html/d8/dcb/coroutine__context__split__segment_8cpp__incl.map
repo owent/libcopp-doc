@@ -1,0 +1,47 @@
+<map id="/home/runner/work/libcopp/libcopp/test/case/coroutine_context_split_segment.cpp" name="/home/runner/work/libcopp/libcopp/test/case/coroutine_context_split_segment.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="2651,5,2855,61"/>
+<area shape="rect" id="node2" href="$d7/d08/coroutine__context__container_8h.html" title=" " alt="" coords="1649,109,1847,151"/>
+<area shape="rect" id="node30" href="$d0/d2e/stack__allocator__split__segment_8h.html" title=" " alt="" coords="2361,452,2530,508"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2761,206,2823,233"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2756,117,2823,143"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2820,370,2900,397"/>
+<area shape="rect" id="node34" href="$dc/d96/test__macros_8h.html" title=" " alt="" coords="2897,117,3055,143"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1757,735,1942,776"/>
+<area shape="rect" id="node4" href="$d3/d6b/coroutine__context_8h.html" title=" " alt="" coords="1229,199,1427,240"/>
+<area shape="rect" id="node8" href="$d8/dc2/errno_8h.html" title=" " alt="" coords="2183,653,2251,679"/>
+<area shape="rect" id="node9" href="$de/ddb/stl__include__prefix_8h.html" title=" " alt="" coords="499,645,651,687"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1639,563,1710,590"/>
+<area shape="rect" id="node11" href="$d4/d4b/stl__include__suffix_8h.html" title=" " alt="" coords="675,645,826,687"/>
+<area shape="rect" id="node25" href="$d5/d5a/stack__allocator_8h.html" title=" " alt="" coords="1905,363,2052,404"/>
+<area shape="rect" id="node29" href="$dc/d9b/stack__traits_8h.html" title=" " alt="" coords="1675,459,1821,501"/>
+<area shape="rect" id="node5" href="$db/d50/coroutine__context__base_8h.html" title=" " alt="" coords="567,288,756,315"/>
+<area shape="rect" id="node6" href="$dc/db2/stack__context_8h.html" title=" " alt="" coords="452,459,599,501"/>
+<area shape="rect" id="node7" href="$de/d47/features_8h.html" title=" " alt="" coords="1887,563,2057,590"/>
+<area shape="rect" id="node12" href="$da/dc7/atomic__int__type_8h.html" title="atomic wrapper fo integers Licensed under the MIT licenses." alt="" coords="851,459,1002,501"/>
+<area shape="rect" id="node16" href="$db/d02/intrusive__ptr_8h.html" title=" " alt="" coords="215,459,377,501"/>
+<area shape="rect" id="node18" title=" " alt="" coords="347,563,424,590"/>
+<area shape="rect" id="node20" href="$dc/dd4/all_8hpp.html" title=" " alt="" coords="966,370,1141,397"/>
+<area shape="rect" id="node24" title=" " alt="" coords="725,370,811,397"/>
+<area shape="rect" id="node13" href="$d8/def/explicit__declare_8h.html" title="导入继承关系约束 &#160;Licensed under the MIT licenses." alt="" coords="702,556,879,597"/>
+<area shape="rect" id="node14" title=" " alt="" coords="903,563,974,590"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1149,563,1219,590"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1049,563,1124,590"/>
+<area shape="rect" id="node19" title=" " alt="" coords="195,563,271,590"/>
+<area shape="rect" id="node21" href="$de/de7/fcontext_8hpp.html" title=" " alt="" coords="1077,467,1291,493"/>
+<area shape="rect" id="node22" href="$d8/dfd/config_8hpp.html" title=" " alt="" coords="1295,556,1463,597"/>
+<area shape="rect" id="node23" title=" " alt="" coords="1349,653,1409,679"/>
+<area shape="rect" id="node26" href="$d1/d4b/stack__allocator__malloc_8h.html" title=" " alt="" coords="1947,459,2130,501"/>
+<area shape="rect" id="node27" href="$d4/d3a/stack__allocator__memory_8h.html" title=" " alt="" coords="2154,459,2337,501"/>
+<area shape="rect" id="node28" href="$d1/dac/stack__allocator__pool_8h.html" title=" " alt="" coords="1467,459,1650,501"/>
+<area shape="rect" id="node35" title=" " alt="" coords="3183,206,3257,233"/>
+<area shape="rect" id="node36" href="$d6/d5c/test__manager_8h.html" title=" " alt="" coords="3036,206,3159,233"/>
+<area shape="rect" id="node45" title=" " alt="" coords="2937,206,3012,233"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3555,288,3613,315"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3281,370,3332,397"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3181,370,3240,397"/>
+<area shape="rect" id="node40" title=" " alt="" coords="2949,288,3041,315"/>
+<area shape="rect" id="node41" title=" " alt="" coords="3065,288,3127,315"/>
+<area shape="rect" id="node42" href="$d4/db8/shell__font_8h.html" title=" " alt="" coords="3152,288,3269,315"/>
+<area shape="rect" id="node43" href="$d6/df7/test__case__base_8h.html" title=" " alt="" coords="3345,288,3479,315"/>
+<area shape="rect" id="node44" title=" " alt="" coords="3444,370,3487,397"/>
+</map>

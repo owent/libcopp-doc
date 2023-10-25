@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAMPLES &mdash; libcopp 3.16.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/highlight.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=f1368178"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/js/setup_lineno.js?v=692e05cf"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="CHANGELOG" href="../CHANGELOG.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            libcopp
+              <img src="../_static/icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGELOG.html">CHANGELOG</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EXAMPLES</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#coroutine-context-example">Coroutine_context example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coroutine-task-example">Coroutine task example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-coroutine-task-manager">Using coroutine task manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-stack-pool">Using stack pool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-then-or-await-task">Using then or await_task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-c-20-coroutine">Using c++20 coroutine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-c-20-coroutine-with-custom-generator">Using c++20 coroutine with custom generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-error-timeout-for-example-for-c-20-coroutine">Custom error (timeout for example) for c++20 coroutine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#let-c-20-coroutine-work-with-cotask-task-macro">Let c++20 coroutine work with cotask::task&lt;MACRO&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-setunhandledexceptionfilter-on-windows-with-cotask-task-macro">Using <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> on Windows with cotask::task&lt;MACRO&gt;</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">libcopp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EXAMPLES</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/example/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<span id="examples-doc-anchor"></span><h1>EXAMPLES<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
+<section id="coroutine-context-example">
+<h2>Coroutine_context example<a class="headerlink" href="#coroutine-context-example" title="Link to this heading"></a></h2>
+<p>This is a simple example of using basic coroutine context below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include context header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/coroutine_context_container.h&gt;</span>
+
+<span class="c1">// define a coroutine runner</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">my_runner</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_context</span><span class="w"> </span><span class="o">*</span><span class="n">addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">this_coroutine</span><span class="o">::</span><span class="n">get_coroutine</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;cortoutine &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">addr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; is running.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">addr</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;cortoutine &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">addr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; is resumed.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_context_default</span><span class="w"> </span><span class="n">coroutine_type</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// create a coroutine</span>
+<span class="w">  </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_context_default</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">co_obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutine_type</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">my_runner</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;cortoutine &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_obj</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; is created.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// start a coroutine</span>
+<span class="w">  </span><span class="n">co_obj</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// yield from my_runner</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;cortoutine &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_obj</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; is yield.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">co_obj</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;cortoutine &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_obj</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; exit and return &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_obj</span><span class="o">-&gt;</span><span class="n">get_ret_code</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Also, you can use <code class="docutils literal notranslate"><span class="pre">copp::coroutine_context_container&lt;ALLOCATOR&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">copp::coroutine_context_default</span></code> to use a different stack allocator.</p>
+</section>
+<section id="coroutine-task-example">
+<h2>Coroutine task example<a class="headerlink" href="#coroutine-task-example" title="Link to this heading"></a></h2>
+<p>This is a simple example of using coroutine task with lambda expression:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include task header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">my_task_t</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// create a task using factory function [with lambda expression]</span>
+<span class="w">  </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; created&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// start a task</span>
+<span class="w">  </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; yield&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; stoped, ready to be destroyed.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Also, you can your stack allocator or id allocator by setting different parameters in template class <strong>cotask::task&lt;TCO_MACRO&gt;</strong></p>
+</section>
+<section id="using-coroutine-task-manager">
+<h2>Using coroutine task manager<a class="headerlink" href="#using-coroutine-task-manager" title="Link to this heading"></a></h2>
+<p>This is a simple example of using task manager:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include context header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task_manager.h&gt;</span>
+
+<span class="c1">// create a task manager</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">my_task_t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">task_ptr_type</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task_manager</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mgr_t</span><span class="p">;</span>
+<span class="n">mgr_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">task_mgr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mgr_t</span><span class="o">::</span><span class="n">create</span><span class="p">();</span>
+
+<span class="c1">// If you task manager to manage timeout, it&#39;s important to call tick interval</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">tick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// the first parameter is second, and the second is nanosecond</span>
+<span class="w">  </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">tick</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// create two coroutine task</span>
+<span class="w">  </span><span class="n">task_ptr_type</span><span class="w"> </span><span class="n">co_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="n">task_ptr_type</span><span class="w"> </span><span class="n">co_another_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">add_task</span><span class="p">(</span><span class="n">co_task</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// add task and setup 5s for timeout</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;some error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">add_task</span><span class="p">(</span><span class="n">co_another_task</span><span class="p">);</span><span class="w">  </span><span class="c1">// add task without timeout</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;some error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">(</span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;start task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; failed, error code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">(</span><span class="n">co_another_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;start task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_another_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; failed, error code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">(</span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;resume task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; failed, error code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task_mgr</span><span class="o">-&gt;</span><span class="n">kill</span><span class="p">(</span><span class="n">co_another_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;kill task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_another_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; failed, error code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;kill task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">co_another_task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; finished.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-stack-pool">
+<h2>Using stack pool<a class="headerlink" href="#using-stack-pool" title="Link to this heading"></a></h2>
+<p>This is a simple example of using stack pool for cotask:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include context header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/stack/stack_pool.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="c1">// define the stack pool type</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">stack_pool</span><span class="o">&lt;</span><span class="n">copp</span><span class="o">::</span><span class="n">allocator</span><span class="o">::</span><span class="n">default_statck_allocator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stack_pool_t</span><span class="p">;</span>
+
+<span class="c1">// define how to create coroutine context</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sample_macro_coroutine</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">stack_allocator_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">allocator</span><span class="o">::</span><span class="n">stack_allocator_pool</span><span class="o">&lt;</span><span class="n">stack_pool_t</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">coroutine_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_context_container</span><span class="o">&lt;</span><span class="n">stack_allocator_type</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// create a stack pool</span>
+<span class="k">static</span><span class="w"> </span><span class="n">stack_pool_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack_pool_t</span><span class="o">::</span><span class="n">create</span><span class="p">();</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;</span><span class="n">sample_macro_coroutine</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample_task_t</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#if defined(LIBCOTASK_MACRO_ENABLED)</span>
+
+<span class="w">  </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">set_min_stack_number</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stack pool=&gt; used stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, used stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_size</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_size</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// create two coroutine task</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">copp</span><span class="o">::</span><span class="n">allocator</span><span class="o">::</span><span class="n">stack_allocator_pool</span><span class="o">&lt;</span><span class="n">stack_pool_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alloc</span><span class="p">(</span><span class="n">global_stack_pool</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sample_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">co_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">sample_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">          </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">sample_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="n">alloc</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">co_task</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;create coroutine task with stack pool failed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stack pool=&gt; used stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_number</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, used stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_size</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_number</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_size</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ..., then do anything you want to do with these tasks</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stack pool=&gt; used stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, used stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_size</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_size</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">copp</span><span class="o">::</span><span class="n">allocator</span><span class="o">::</span><span class="n">stack_allocator_pool</span><span class="o">&lt;</span><span class="n">stack_pool_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alloc</span><span class="p">(</span><span class="n">global_stack_pool</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sample_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">co_another_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">sample_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">          </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">sample_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="n">alloc</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">co_another_task</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;create coroutine task with stack pool failed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ..., then do anything you want to do with these tasks</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stack pool=&gt; used stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, used stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">used_stack_size</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_number</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, free stack size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_stack_pool</span><span class="o">-&gt;</span><span class="n">get_limit</span><span class="p">().</span><span class="n">free_stack_size</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="cp">#else</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;this sample require cotask enabled.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-then-or-await-task">
+<h2>Using then or await_task<a class="headerlink" href="#using-then-or-await-task" title="Link to this heading"></a></h2>
+<p>This is a simple example of using <code class="docutils literal notranslate"><span class="pre">then</span></code> and <code class="docutils literal notranslate"><span class="pre">await_task</span></code> for cotask:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * sample_readme_5.cpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 2014-05-19</span>
+<span class="cm"> *      Author: owent</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Released under the MIT license</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/utils/std/explicit_declare.h&gt;</span>
+
+<span class="c1">// include manager header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="cp">#if defined(LIBCOTASK_MACRO_ENABLED)</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">my_task_t</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">test_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// create a task using lambda expression</span>
+<span class="w">  </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">first_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;|first task running and will be yield ...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;|first task resumed ...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test code already reset =&gt; %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">test_code</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// add many then task using lambda expression</span>
+<span class="w">  </span><span class="n">first_task</span>
+<span class="w">      </span><span class="o">-&gt;</span><span class="n">then</span><span class="p">([</span><span class="o">=</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;|second task running...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test code should be inited 128 =&gt; %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">test_code</span><span class="p">);</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="o">-&gt;</span><span class="n">then</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;|haha ... this is the third task.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test code is the same =&gt; %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">test_code</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;return value will be ignored&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="o">-&gt;</span><span class="n">then</span><span class="p">(</span>
+<span class="w">          </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">EXPLICIT_UNUSED_ATTR</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">priv_data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;|it&#39;s boring&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test code is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">test_code</span><span class="p">);</span>
+<span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">test_code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">priv_data</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="o">&amp;</span><span class="n">test_code</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">test_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// start a task</span>
+<span class="w">  </span><span class="n">first_task</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+<span class="w">  </span><span class="n">first_task</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// these code below will failed.</span>
+<span class="w">  </span><span class="n">first_task</span><span class="o">-&gt;</span><span class="n">then</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this will run immediately.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">await_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;await_task for first_task.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="n">await_task</span><span class="o">-&gt;</span><span class="n">await_task</span><span class="p">(</span><span class="n">first_task</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;|task start twice will failed: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">first_task</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">());</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;|test_code end with %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">test_code</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this sample require cotask enabled&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="using-c-20-coroutine">
+<h2>Using c++20 coroutine<a class="headerlink" href="#using-c-20-coroutine" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Copyright 2023 owent</span>
+<span class="c1">// Created by owent on 2022-05-27</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include manager header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/callable_promise.h&gt;</span>
+
+<span class="cp">#if defined(LIBCOPP_MACRO_ENABLE_STD_COROUTINE) &amp;&amp; LIBCOPP_MACRO_ENABLE_STD_COROUTINE</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_callable_with_int_result</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ... any code</span>
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_callable_with_void_result</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ... any code</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_task</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// suspend and wait custom waker</span>
+<span class="w">  </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="k">co_await</span><span class="w"> </span><span class="n">LIBCOPP_MACRO_STD_COROUTINE_NAMESPACE</span><span class="w"> </span><span class="n">suspend_always</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// ... any code</span>
+<span class="w">  </span><span class="c1">// We can get current status by co_yield yield_status()</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">current_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_yield</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">yield_status</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// The return value will be ignored when the future is already set by custom waker</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current coroutine callable status: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">current_status</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">co_await</span><span class="w"> </span><span class="n">coroutine_callable_with_void_result</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">coroutine_callable_with_int_result</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Coroutine int callable result: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">rpc_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutine_simulator_task</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// We should not explict call start and get_internal_handle().resume() in a real usage</span>
+<span class="w">  </span><span class="c1">// It&#39;s only allowed to start and resume by co_wait the callable_future object</span>
+<span class="w">  </span><span class="n">rpc_result</span><span class="p">.</span><span class="n">get_internal_handle</span><span class="p">().</span><span class="n">resume</span><span class="p">();</span><span class="w">  </span><span class="c1">// resume co_await LIBCOPP_MACRO_STD_COROUTINE_NAMESPACE suspend_always();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current coroutine callable status: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">rpc_result</span><span class="p">.</span><span class="n">get_status</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this sample require cotask enabled and compiler support c++20 coroutine&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="using-c-20-coroutine-with-custom-generator">
+<h2>Using c++20 coroutine with custom generator<a class="headerlink" href="#using-c-20-coroutine-with-custom-generator" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * sample_readme_8.cpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 2020-05-22</span>
+<span class="cm"> *      Author: owent</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Released under the MIT license</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="c1">// include manager header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/callable_promise.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/generator_promise.h&gt;</span>
+
+<span class="cp">#if defined(LIBCOPP_MACRO_ENABLE_STD_COROUTINE) &amp;&amp; LIBCOPP_MACRO_ENABLE_STD_COROUTINE</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">my_generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">my_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">g_sample_executor</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">generator_callback</span><span class="p">(</span><span class="n">my_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">g_sample_executor</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_rpc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">my_generator</span><span class="w"> </span><span class="n">generator_object</span><span class="p">{</span><span class="n">generator_callback</span><span class="p">};</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">generator_object</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;co_await named generator: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">my_generator</span><span class="p">{</span><span class="n">generator_callback</span><span class="p">};</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;co_await temporary generator: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">generator_object</span><span class="p">.</span><span class="n">get_context</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">value3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">generator_object</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;reset and co_await named generator again: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">191</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutine_simulator_rpc</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">g_sample_executor</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_sample_executor</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="w">    </span><span class="n">g_sample_executor</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="o">++</span><span class="n">result</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this sample require cotask enabled and compiler support c++20 coroutine&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-error-timeout-for-example-for-c-20-coroutine">
+<h2>Custom error (timeout for example) for c++20 coroutine<a class="headerlink" href="#custom-error-timeout-for-example-for-c-20-coroutine" title="Link to this heading"></a></h2>
+<p>By implementing <code class="docutils literal notranslate"><span class="pre">std_coroutine_default_error_transform&lt;CustomType&gt;</span></code> , we can transform error code of libcopp to our custom type.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * sample_readme_9.cpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 2020-05-20</span>
+<span class="cm"> *      Author: owent</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Released under the MIT license</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include manager header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/callable_promise.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/generator_promise.h&gt;</span>
+
+<span class="cp">#if defined(LIBCOPP_MACRO_ENABLE_STD_COROUTINE) &amp;&amp; LIBCOPP_MACRO_ENABLE_STD_COROUTINE</span>
+
+<span class="c1">// ============================ types for task and generator ============================</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">sample_message_t</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">ret_code</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">sample_message_t</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ret_code</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="n">sample_message_t</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ret_code</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="n">sample_message_t</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sample_message_t</span><span class="p">(</span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">sample_message_t</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">  </span><span class="o">~</span><span class="n">sample_message_t</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="cp">#  define SAMPLE_TIMEOUT_ERROR_CODE (-500)</span>
+
+<span class="n">LIBCOPP_COPP_NAMESPACE_BEGIN</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">std_coroutine_default_error_transform</span><span class="o">&lt;</span><span class="n">sample_message_t</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_message_t</span><span class="p">;</span>
+<span class="w">  </span><span class="n">type</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="n">promise_status</span><span class="w"> </span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">promise_status</span><span class="o">::</span><span class="n">kTimeout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">sample_message_t</span><span class="p">{</span><span class="n">SAMPLE_TIMEOUT_ERROR_CODE</span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sample_message_t</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">in</span><span class="p">)};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="n">LIBCOPP_COPP_NAMESPACE_END</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">int_generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">int_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">g_int_executor</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">custom_generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="n">sample_message_t</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">custom_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">g_sample_executor</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">int_generator_callback</span><span class="p">(</span><span class="n">int_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">g_int_executor</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">custom_generator_callback</span><span class="p">(</span><span class="n">custom_generator</span><span class="o">::</span><span class="n">context_pointer_type</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">g_sample_executor</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_integer_l2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">int_generator</span><span class="p">{</span><span class="n">int_generator_callback</span><span class="p">};</span>
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_integer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_integer_l2</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int generator is killed with code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_custom_l2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">custom_generator</span><span class="p">{</span><span class="n">custom_generator_callback</span><span class="p">};</span>
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">ret_code</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_custom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_custom_l2</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;custom generator is killed with code: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// sample for await generator and timeout</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_integer</span><span class="p">();</span>
+<span class="w">  </span><span class="n">f1</span><span class="p">.</span><span class="n">kill</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="o">::</span><span class="n">kCancle</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int generator is killed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// sample for await task and timeout</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutine_simulator_rpc_custom</span><span class="p">();</span>
+<span class="w">  </span><span class="n">f2</span><span class="p">.</span><span class="n">kill</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="o">::</span><span class="n">kTimeout</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;custom generator is killed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this sample require cotask enabled and compiler support c++20 coroutine&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="let-c-20-coroutine-work-with-cotask-task-macro">
+<h2>Let c++20 coroutine work with cotask::task&lt;MACRO&gt;<a class="headerlink" href="#let-c-20-coroutine-work-with-cotask-task-macro" title="Link to this heading"></a></h2>
+<p>This is a simple example to let c++20 coroutine await cotask::task</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * sample_readme_10.cpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 2020-05-20</span>
+<span class="cm"> *      Author: owent</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Released under the MIT license</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// include manager header file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/callable_promise.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="cp">#if defined(LIBCOPP_MACRO_ENABLE_STD_COROUTINE) &amp;&amp; LIBCOPP_MACRO_ENABLE_STD_COROUTINE</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">my_task_t</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">call_for_await_cotask</span><span class="p">(</span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span><span class="k">co_return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cotask_action_callback</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">234</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">co_task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">cotask_action_callback</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">call_for_await_cotask</span><span class="p">(</span><span class="n">co_task</span><span class="p">);</span>
+<span class="w">  </span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">345</span><span class="p">;</span>
+<span class="w">  </span><span class="n">co_task</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">*&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">res</span><span class="p">));</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;co_await a cotask::task and get result: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_internal_promise</span><span class="p">().</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;this sample require cotask enabled and compiler support c++20 coroutine&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+<section id="using-setunhandledexceptionfilter-on-windows-with-cotask-task-macro">
+<h2>Using <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> on Windows with cotask::task&lt;MACRO&gt;<a class="headerlink" href="#using-setunhandledexceptionfilter-on-windows-with-cotask-task-macro" title="Link to this heading"></a></h2>
+<p>Some applications will use <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> to catch unhandled exception and analysis crash problem. But <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> is only works with <a class="reference external" href="https://github.com/owent/libcopp/blob/v2/include/libcopp/coroutine/coroutine_context_fiber_container.h">coroutine context of windows fiber</a> . This is a sample of using <strong>windows fiber</strong> as coroutine context in <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;MACRO&gt;</span></code> .</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/utils/config/libcopp_build_features.h&gt;</span>
+
+<span class="cp">#if (defined(LIBCOTASK_MACRO_ENABLED) &amp;&amp; LIBCOTASK_MACRO_ENABLED) &amp;&amp; defined(LIBCOPP_MACRO_ENABLE_WIN_FIBER) &amp;&amp; \</span>
+<span class="cp">    LIBCOPP_MACRO_ENABLE_WIN_FIBER</span>
+<span class="c1">// include task header file</span>
+<span class="cp">#</span><span class="w">  </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">my_task_macro_t</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">stack_allocator_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_fiber_context_default</span><span class="o">::</span><span class="n">allocator_type</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">coroutine_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_fiber_context_default</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;</span><span class="n">my_task_macro_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_task_t</span><span class="p">;</span>
+
+<span class="cp">#  ifdef _MSC_VER</span>
+<span class="cp">#    pragma warning(push)</span>
+<span class="cp">#    pragma warning(disable : 4091)</span>
+
+<span class="cp">#</span><span class="w">    </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;atlconv.h&gt;</span>
+<span class="cp">#</span><span class="w">    </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;imagehlp.h&gt;</span>
+
+<span class="cp">#    pragma comment(lib, &quot;dbghelp.lib&quot;)</span>
+
+<span class="cp">#    ifdef UNICODE</span>
+<span class="cp">#      define SAMPLE_VC_TEXT(x) A2W(x)</span>
+<span class="cp">#    else</span>
+<span class="cp">#      define SAMPLE_VC_TEXT(x) x</span>
+<span class="cp">#    endif</span>
+
+<span class="n">LPTOP_LEVEL_EXCEPTION_FILTER</span><span class="w"> </span><span class="n">g_msvc_debuger_old_handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">g_msvc_debuger_pattern</span><span class="p">;</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">CreateMiniDump</span><span class="p">(</span><span class="n">EXCEPTION_POINTERS</span><span class="w"> </span><span class="o">*</span><span class="n">pep</span><span class="p">,</span><span class="w"> </span><span class="n">LPCTSTR</span><span class="w"> </span><span class="n">strFileName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">hFile</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="n">CreateFile</span><span class="p">(</span><span class="n">strFileName</span><span class="p">,</span><span class="w"> </span><span class="n">GENERIC_READ</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GENERIC_WRITE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="n">CREATE_ALWAYS</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_ATTRIBUTE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">hFile</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">hFile</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INVALID_HANDLE_VALUE</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">MINIDUMP_EXCEPTION_INFORMATION</span><span class="w"> </span><span class="n">mdei</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mdei</span><span class="p">.</span><span class="n">ThreadId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetCurrentThreadId</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mdei</span><span class="p">.</span><span class="n">ExceptionPointers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pep</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mdei</span><span class="p">.</span><span class="n">ClientPointers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// MINIDUMP_CALLBACK_INFORMATION mci;</span>
+<span class="w">    </span><span class="c1">// mci.CallbackRoutine = (MINIDUMP_CALLBACK_ROUTINE)MiniDumpCallback;</span>
+<span class="w">    </span><span class="c1">// mci.CallbackParam = 0;</span>
+<span class="w">    </span><span class="n">MINIDUMP_TYPE</span><span class="w"> </span><span class="n">mdt</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="p">(</span><span class="n">MINIDUMP_TYPE</span><span class="p">)(</span><span class="n">MiniDumpWithPrivateReadWriteMemory</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MiniDumpWithDataSegs</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MiniDumpWithHandleData</span><span class="w"> </span><span class="o">|</span>
+<span class="w">                        </span><span class="n">MiniDumpWithFullMemoryInfo</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MiniDumpWithThreadInfo</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MiniDumpWithUnloadedModules</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MiniDumpWriteDump</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span><span class="w"> </span><span class="n">GetCurrentProcessId</span><span class="p">(),</span><span class="w"> </span><span class="n">hFile</span><span class="p">,</span><span class="w"> </span><span class="n">mdt</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">pep</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mdei</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">hFile</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">LONG</span><span class="w"> </span><span class="n">WINAPI</span><span class="w"> </span><span class="n">GPTUnhandledExceptionFilter</span><span class="p">(</span><span class="n">PEXCEPTION_POINTERS</span><span class="w"> </span><span class="n">pExceptionInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//得到当前时间</span>
+<span class="w">  </span><span class="n">SYSTEMTIME</span><span class="w"> </span><span class="n">st</span><span class="p">;</span>
+<span class="w">  </span><span class="o">::</span><span class="n">GetLocalTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">st</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">//得到程序所在文件夹</span>
+<span class="w">  </span><span class="c1">// TCHAR exeFullPath[256]; // MAX_PATH</span>
+<span class="w">  </span><span class="c1">// GetModuleFileName(nullptr, exeFullPath, 256);//得到程序模块名称，全路径</span>
+
+<span class="w">  </span><span class="n">TCHAR</span><span class="w"> </span><span class="n">szFileName</span><span class="p">[</span><span class="n">_MAX_FNAME</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="w">  </span><span class="n">USES_CONVERSION</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">wsprintf</span><span class="p">(</span><span class="n">szFileName</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;%s-%04d-%02d-%02d.%02d%02d%02d.%03d.dmp&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">SAMPLE_VC_TEXT</span><span class="p">(</span><span class="n">g_msvc_debuger_pattern</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span>
+<span class="w">           </span><span class="n">st</span><span class="p">.</span><span class="n">wYear</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wMonth</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wDay</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wHour</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wMinute</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wSecond</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">wMilliseconds</span><span class="p">);</span>
+<span class="w">  </span><span class="n">CreateMiniDump</span><span class="p">(</span><span class="n">pExceptionInfo</span><span class="p">,</span><span class="w"> </span><span class="n">szFileName</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">nullptr</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">g_msvc_debuger_old_handle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EXCEPTION_EXECUTE_HANDLER</span><span class="p">;</span><span class="w">  </span><span class="c1">// 下一个Handle, 一般是程序停止运行</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">g_msvc_debuger_old_handle</span><span class="p">(</span><span class="n">pExceptionInfo</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="kr">__cdecl</span><span class="w"> </span><span class="n">sample_setup_msvc_mini_dump</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">prefix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">g_msvc_debuger_pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<span class="w">  </span><span class="n">g_msvc_debuger_old_handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SetUnhandledExceptionFilter</span><span class="p">(</span><span class="n">GPTUnhandledExceptionFilter</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_msvc_debuger_old_handle</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GPTUnhandledExceptionFilter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">g_msvc_debuger_old_handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">#  endif</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#  ifdef _MSC_VER</span>
+<span class="w">  </span><span class="n">sample_setup_msvc_mini_dump</span><span class="p">(</span><span class="s">&quot;d:/libcopp-test-minidump&quot;</span><span class="p">);</span>
+<span class="cp">#  endif</span>
+<span class="w">  </span><span class="c1">// create a task using factory function [with lambda expression]</span>
+<span class="w">  </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">ptr_t</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_task_t</span><span class="o">::</span><span class="n">create</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; started&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">this_task</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_task_t</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; resumed&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ! Make crash and it&#39;s will generate a mini dump into d:/libcopp-test-minidump-*.dmp</span>
+<span class="w">    </span><span class="c1">// copp::this_coroutine::get_coroutine()-&gt;yield();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; created&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// start a task</span>
+<span class="w">  </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; yield&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">get_id</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; stoped, ready to be destroyed.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#  ifdef _MSC_VER</span>
+<span class="cp">#    pragma warning(pop)</span>
+<span class="cp">#  endif</span>
+
+<span class="cp">#else</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;lambda not supported, or fiber is not supported, this sample is not available.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../CHANGELOG.html" class="btn btn-neutral float-left" title="CHANGELOG" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, libcopp.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

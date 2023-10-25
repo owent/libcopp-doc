@@ -1,0 +1,4 @@
+<map id="gsl::details::is_comparable_to_nullptr&lt; T, typename std::enable_if&lt; std::is_convertible&lt; decltype(std::declval&lt; T &gt;() !=nullptr), bool &gt;::value &gt;::type &gt;" name="gsl::details::is_comparable_to_nullptr&lt; T, typename std::enable_if&lt; std::is_convertible&lt; decltype(std::declval&lt; T &gt;() !=nullptr), bool &gt;::value &gt;::type &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,204,281"/>
+<area shape="rect" id="node2" title=" " alt="" coords="49,5,161,83"/>
+</map>
