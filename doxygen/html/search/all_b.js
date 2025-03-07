@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['key_5fvalue_5f_0',['key_value_',['../d1/df6/classutil_1_1cli_1_1cmd__option__list.html#a9bcb56cafcee123fea8d7ab644dae997',1,'util::cli::cmd_option_list']]],
+  ['keys_5f_1',['keys_',['../d1/df6/classutil_1_1cli_1_1cmd__option__list.html#ab511955fd0782724575195fece4e6091',1,'util::cli::cmd_option_list']]],
+  ['kill_2',['kill',['../d1/d69/classimpl_1_1task__impl.html#a2091161696d7d4b49ade5011a32717c1',1,'impl::task_impl::kill(enum EN_TASK_STATUS status, void *priv_data)=0'],['../d1/d69/classimpl_1_1task__impl.html#a07e51bc7778a86d27ef4dd81d6de56c1',1,'impl::task_impl::kill(void *priv_data)'],['../d1/d69/classimpl_1_1task__impl.html#a789e19b719fc33fae5ea7769d5f30146',1,'impl::task_impl::kill(enum EN_TASK_STATUS status)'],['../d1/d69/classimpl_1_1task__impl.html#aaf4fb303a47ed69e943605af82bfd12e',1,'impl::task_impl::kill()'],['../d1/d76/classtask.html#a547b0c5c856fd8465d60b7681c310dd0',1,'task::kill()'],['../d3/d47/classtask__manager_3_01task_3_01TCO__MACRO_01_4_01_4.html#a192e2b6e54362ade00f99cb1f6355066',1,'task_manager&lt; task&lt; TCO_MACRO &gt; &gt;::kill(id_type id, enum EN_TASK_STATUS status, void *priv_data=nullptr)'],['../d3/d47/classtask__manager_3_01task_3_01TCO__MACRO_01_4_01_4.html#a1dff76433f62b417576de2f723660704',1,'task_manager&lt; task&lt; TCO_MACRO &gt; &gt;::kill(id_type id, void *priv_data=nullptr)']]],
+  ['kstl_3',['kStl',['../d4/daf/namespacememory.html#ac54c4ba14ccb0c8826195494e93b6b9dacf567c3d796f2cc59393cb6b5c91072c',1,'memory']]],
+  ['kstrongrc_4',['kStrongRc',['../d4/daf/namespacememory.html#ac54c4ba14ccb0c8826195494e93b6b9dab62890a078cac2174b9b114c7c842350',1,'memory']]]
+];

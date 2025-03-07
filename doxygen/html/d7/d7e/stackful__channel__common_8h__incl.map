@@ -1,0 +1,29 @@
+<map id="/home/runner/work/libcopp/libcopp/include/libcopp/coroutine/stackful_channel_common.h" name="/home/runner/work/libcopp/libcopp/include/libcopp/coroutine/stackful_channel_common.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="398,5,599,75"/>
+<area shape="rect" id="Node000002" href="$df/d29/compile__optimize_8h.html" title=" " alt="" coords="5,211,160,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,57,295,81,241,100,191,125,144,161,107,201,103,198,140,157,188,120,239,96,293,76,397,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,211,370,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="465,77,367,165,316,204,313,200,364,161,461,73"/>
+<area shape="rect" id="Node000004" href="$d8/dc2/errno_8h.html" title=" " alt="" coords="202,130,353,155"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="425,77,316,127,314,122,423,72"/>
+<area shape="rect" id="Node000005" href="$d7/dab/nostd_2type__traits_8h.html" title=" " alt="" coords="428,123,569,163"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="501,75,501,108,496,108,496,75"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="794,218,886,243"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="534,73,588,124,633,160,792,211,791,216,631,165,584,128,530,77"/>
+<area shape="rect" id="Node000011" href="$de/ddb/stl__include__prefix_8h.html" title=" " alt="" coords="644,123,796,163"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="574,72,667,115,665,119,572,77"/>
+<area shape="rect" id="Node000012" href="$d4/d4b/stl__include__suffix_8h.html" title=" " alt="" coords="821,123,971,163"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="600,64,809,117,808,122,599,69"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="280,156,280,197,275,197,275,156"/>
+<area shape="poly" id="edge11_Node000005_Node000002" title=" " alt="" coords="428,161,174,213,173,208,427,156"/>
+<area shape="poly" id="edge12_Node000005_Node000003" title=" " alt="" coords="451,165,339,208,337,203,449,160"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="684,218,769,243"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="550,160,684,211,683,216,548,165"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="394,218,465,243"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="485,165,449,209,445,205,481,161"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="489,218,575,243"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="509,162,525,204,520,206,504,164"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="571,157,782,208,793,211,792,216,781,213,569,162"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="599,218,659,243"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="529,161,601,208,598,212,526,165"/>
+</map>

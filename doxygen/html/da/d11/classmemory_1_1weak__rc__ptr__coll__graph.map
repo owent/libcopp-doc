@@ -1,0 +1,3 @@
+<map id="memory::weak_rc_ptr&lt; T &gt;" name="memory::weak_rc_ptr&lt; T &gt;">
+<area shape="rect" id="Node000001" title="A std::weak_ptr replacement that is more lightweight and do not use atomic operation for reference co..." alt="" coords="5,5,199,311"/>
+</map>

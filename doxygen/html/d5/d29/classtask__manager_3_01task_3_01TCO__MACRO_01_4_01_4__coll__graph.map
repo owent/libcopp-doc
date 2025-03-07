@@ -1,0 +1,12 @@
+<map id="task_manager&lt; task&lt; TCO_MACRO &gt; &gt;" name="task_manager&lt; task&lt; TCO_MACRO &gt; &gt;">
+<area shape="rect" id="Node000001" title="task manager for stackful coroutine task" alt="" coords="175,488,364,828"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,296,232,425"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,424,178,472,173,474,149,427"/>
+<area shape="rect" id="Node000003" href="$d2/da8/structdetail_1_1tickspec__t.html" title=" " alt="" coords="228,5,353,91"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,91,284,257,277,472,272,471,279,257,286,91"/>
+<area shape="rect" id="Node000005" href="$d9/d85/structdetail_1_1task__timer__node.html" title=" " alt="" coords="325,153,456,233"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="322,89,356,138,352,141,318,93"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="311,321,499,401"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="390,402,356,474,352,472,385,400"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="397,233,403,304,398,305,391,234"/>
+</map>

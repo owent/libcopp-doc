@@ -1,0 +1,9 @@
+<map id="memory::strong_rc_ptr&lt; T &gt;" name="memory::strong_rc_ptr&lt; T &gt;">
+<area shape="rect" id="Node000001" title="A std::shared_ptr replacement that is more lightweight and do not use atomic operation for reference ..." alt="" coords="56,795,255,1060"/>
+<area shape="rect" id="Node000002" href="$d6/d39/classmemory_1_1strong__rc__ptr__access.html" title="Base class to mantain all shared APIs." alt="" coords="5,532,180,652"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,665,133,794,128,795,104,666"/>
+<area shape="rect" id="Node000003" href="$d1/dd1/classmemory_1_1____strong__rc__counter.html" title=" " alt="" coords="204,452,395,732"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,733,221,781,216,778,237,731"/>
+<area shape="rect" id="Node000004" href="$d3/d31/classmemory_1_1____rc__ptr__counted__data__base.html" title=" " alt="" coords="206,5,393,389"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="302,389,302,436,297,436,297,389"/>
+</map>
