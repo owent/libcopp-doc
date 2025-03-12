@@ -1,0 +1,7 @@
+<map id="coroutine_context" name="coroutine_context">
+<area shape="rect" id="Node000001" title="base type of all stackful coroutine context" alt="" coords="34,692,201,1157"/>
+<area shape="rect" id="Node000003" href="$dc/de2/classcoroutine__context__container.html" title="coroutine container contain stack context, stack allocator and runtime fcontext" alt="" coords="5,1205,229,1560"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,1171,120,1205,115,1205,115,1171"/>
+<area shape="rect" id="Node000002" href="$d8/dad/classcoroutine__context__base.html" title="base type of all coroutine context" alt="" coords="21,5,214,644"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,658,120,692,115,692,115,658"/>
+</map>

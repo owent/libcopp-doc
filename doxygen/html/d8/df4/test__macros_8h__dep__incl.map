@@ -1,0 +1,45 @@
+<map id="/home/runner/work/libcopp/libcopp/test/frame/test_macros.h" name="/home/runner/work/libcopp/libcopp/test/frame/test_macros.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2315,5,2511,60"/>
+<area shape="rect" id="Node000002" href="$d0/d0f/test_2app_2main_8cpp.html" title=" " alt="" coords="5,115,201,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2301,37,1868,43,1265,55,657,76,404,92,213,111,173,118,172,113,212,105,404,87,657,71,1264,49,1868,37,2301,32"/>
+<area shape="rect" id="Node000003" href="$dd/d42/callable__promise__test_8cpp.html" title=" " alt="" coords="225,108,421,163"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2301,38,1908,44,1368,57,828,79,603,93,433,111,422,112,421,107,432,105,603,88,828,74,1368,52,1907,39,2301,33"/>
+<area shape="rect" id="Node000004" href="$db/d1c/coroutine__context__base__test_8cpp.html" title=" " alt="" coords="445,108,647,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2301,39,1948,47,1474,61,1003,82,807,95,658,111,648,112,647,107,658,105,806,90,1002,77,1474,55,1948,41,2301,33"/>
+<area shape="rect" id="Node000005" href="$dc/d87/coroutine__context__channel__test_8cpp.html" title=" " alt="" coords="671,108,872,163"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2301,39,1581,64,1178,85,1011,97,884,111,873,112,872,107,883,105,1010,92,1177,79,1580,58,2301,34"/>
+<area shape="rect" id="Node000006" href="$d2/d0e/coroutine__context__fiber__test_8cpp.html" title=" " alt="" coords="896,108,1097,163"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="2301,37,2081,40,1785,51,1449,73,1278,90,1110,111,1098,113,1097,107,1110,105,1277,84,1449,68,1785,46,2081,35,2301,31"/>
+<area shape="rect" id="Node000007" href="$d9/d1b/coroutine__context__private__data__test_8cpp.html" title=" " alt="" coords="1122,108,1349,163"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="2301,40,2121,47,1886,60,1624,81,1361,111,1349,112,1349,107,1360,105,1624,75,1886,54,2120,41,2301,34"/>
+<area shape="rect" id="Node000008" href="$d4/d43/coroutine__context__split__segment_8cpp.html" title=" " alt="" coords="1373,108,1577,163"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="2301,42,1980,64,1785,84,1589,111,1578,112,1577,107,1588,105,1784,79,1980,59,2301,37"/>
+<area shape="rect" id="Node000009" href="$da/d7f/coroutine__context__this__coroutine__test_8cpp.html" title=" " alt="" coords="1601,108,1837,163"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="2301,49,2091,75,1849,111,1838,113,1837,107,1848,105,2090,70,2301,44"/>
+<area shape="rect" id="Node000010" href="$db/d72/coroutine__task__channel__test_8cpp.html" title=" " alt="" coords="1861,108,2063,163"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="2302,61,2075,111,2063,113,2062,108,2073,105,2300,55"/>
+<area shape="rect" id="Node000011" href="$d9/d9f/coroutine__task__fiber__test_8cpp.html" title=" " alt="" coords="2087,108,2288,163"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="2343,68,2247,110,2245,106,2341,63"/>
+<area shape="rect" id="Node000012" href="$d4/d67/coroutine__task__manager__test_8cpp.html" title=" " alt="" coords="2312,108,2513,163"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="2415,74,2415,108,2410,108,2410,74"/>
+<area shape="rect" id="Node000013" href="$de/d7a/coroutine__task__test_8cpp.html" title=" " alt="" coords="2537,108,2739,163"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="2485,63,2580,106,2578,110,2483,68"/>
+<area shape="rect" id="Node000014" href="$d6/dd8/fcontext__test_8cpp.html" title=" " alt="" coords="2763,108,2959,163"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="2525,55,2752,105,2763,108,2762,113,2751,111,2524,60"/>
+<area shape="rect" id="Node000015" href="$d9/d33/future__test_8cpp.html" title=" " alt="" coords="2983,108,3179,163"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="2525,43,2733,68,2972,105,2983,108,2982,113,2971,111,2732,73,2524,48"/>
+<area shape="rect" id="Node000016" href="$d3/dfa/generator__promise__test_8cpp.html" title=" " alt="" coords="3203,108,3406,163"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="2525,37,2827,61,3009,80,3192,105,3203,107,3202,113,3191,111,3009,85,2826,66,2524,43"/>
+<area shape="rect" id="Node000017" href="$de/d33/id__allocator__test_8cpp.html" title=" " alt="" coords="3430,108,3646,163"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="2525,34,2697,42,2920,55,3169,76,3418,105,3430,107,3429,112,3418,111,3168,81,2920,60,2697,47,2524,40"/>
+<area shape="rect" id="Node000018" href="$dc/d37/nostd__test_8cpp.html" title=" " alt="" coords="3671,108,3867,163"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="2524,32,2735,35,3018,46,3337,69,3499,85,3658,105,3671,107,3670,113,3658,111,3499,90,3336,74,3017,52,2735,41,2524,37"/>
+<area shape="rect" id="Node000019" href="$dc/d3c/rc__ptr__test_8cpp.html" title=" " alt="" coords="3891,108,4087,163"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="2525,34,3215,59,3599,80,3759,92,3880,105,3891,107,3890,112,3879,111,3758,97,3599,85,3215,64,2525,40"/>
+<area shape="rect" id="Node000020" href="$d4/d84/stack__pool__test_8cpp.html" title=" " alt="" coords="4111,108,4307,163"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="2525,33,2865,42,3320,56,3770,77,3958,90,4100,105,4111,107,4110,112,4099,111,3957,96,3770,82,3320,61,2865,47,2525,39"/>
+<area shape="rect" id="Node000021" href="$da/dd2/task__promise__task__manager__test_8cpp.html" title=" " alt="" coords="4331,108,4572,163"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="2525,33,2905,42,3423,57,3941,78,4156,91,4320,105,4331,107,4330,112,4319,111,4156,96,3941,83,3423,62,2905,47,2525,39"/>
+<area shape="rect" id="Node000022" href="$d6/da7/task__promise__test_8cpp.html" title=" " alt="" coords="4596,108,4792,163"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="2525,32,2952,37,3548,50,4147,71,4396,87,4585,105,4596,107,4595,112,4584,111,4396,92,4146,77,3548,55,2952,43,2525,38"/>
+</map>

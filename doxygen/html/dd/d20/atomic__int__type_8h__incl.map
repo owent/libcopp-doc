@@ -1,0 +1,23 @@
+<map id="/home/runner/work/libcopp/libcopp/include/libcopp/utils/atomic_int_type.h" name="/home/runner/work/libcopp/libcopp/include/libcopp/utils/atomic_int_type.h">
+<area shape="rect" id="Node000001" title="atomic wrapper fo integers Licensed under the MIT licenses." alt="" coords="528,5,724,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,269,191,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="528,43,397,53,255,68,135,87,95,98,74,110,64,126,59,143,58,183,69,222,83,256,78,258,63,223,53,183,53,143,59,123,71,106,93,93,134,82,254,63,397,48,527,38"/>
+<area shape="rect" id="Node000003" href="$de/d47/features_8h.html" title=" " alt="" coords="85,115,255,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="528,57,240,115,239,110,527,51"/>
+<area shape="rect" id="Node000005" href="$d8/def/explicit__declare_8h.html" title=" " alt="" coords="280,108,457,148"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="555,63,434,106,432,101,553,58"/>
+<area shape="rect" id="Node000006" href="$de/ddb/stl__include__prefix_8h.html" title=" " alt="" coords="482,108,634,148"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="609,62,582,98,578,95,605,59"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="659,115,729,141"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="647,59,679,102,675,106,643,62"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="753,115,824,141"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="673,58,758,106,756,111,670,62"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="848,115,919,141"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="704,58,838,105,843,108,841,113,836,111,702,63"/>
+<area shape="rect" id="Node000010" href="$d4/d4b/stl__include__suffix_8h.html" title=" " alt="" coords="943,108,1093,148"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="725,55,930,103,929,108,724,60"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="162,142,144,167,126,197,107,256,102,255,121,195,139,164,158,139"/>
+<area shape="rect" id="Node000004" href="$d8/dc2/errno_8h.html" title=" " alt="" coords="136,196,204,221"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="173,141,173,182,167,182,167,141"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="161,223,127,261,123,257,157,220"/>
+</map>

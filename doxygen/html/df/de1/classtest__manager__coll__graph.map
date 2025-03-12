@@ -1,0 +1,20 @@
+<map id="test_manager" name="test_manager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="271,448,461,833"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="165,276,309,371"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,370,284,432,279,434,253,372"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="60,148,139,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,212,182,262,178,266,128,215"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,283,140,363"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="92,214,86,238,81,267,76,266,81,237,87,213"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="34,5,165,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="102,99,102,148,97,148,97,99"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="176,148,297,213"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="239,213,239,260,234,260,234,213"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="225,13,248,78"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="239,78,239,131,234,131,234,78"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="333,276,487,371"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="406,371,398,432,392,432,401,370"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="512,276,663,371"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="557,372,473,492,469,489,553,369"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="111,362,261,523,258,527,107,366"/>
+</map>
