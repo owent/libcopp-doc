@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['reference_0',['reference',['../d9/d1f/classgsl_1_1span.html#ac97543a8f68edda5dd7fa4aca30cc065',1,'gsl::span::reference'],['../dd/d88/classgsl_1_1span_3_01T_00_01dynamic__extent_01_4.html#a0de1a134364b7ecd2065ee7068d561f1',1,'gsl::span&lt; T, dynamic_extent &gt;::reference'],['../d6/d30/classutil_1_1iterator__guard.html#aff0ba663e59f5667e338cfd5079dee5a',1,'util::iterator_guard::reference']]],
+  ['reverse_5fiterator_1',['reverse_iterator',['../d9/d1f/classgsl_1_1span.html#a27376f5a4212803eeadb7932af71e53a',1,'gsl::span::reverse_iterator'],['../dd/d88/classgsl_1_1span_3_01T_00_01dynamic__extent_01_4.html#af592e9dc34b267916299d77b25b8d7ca',1,'gsl::span&lt; T, dynamic_extent &gt;::reverse_iterator']]],
+  ['right_5ftype_2',['right_type',['../d6/d4e/structmemory_1_1____strong__rc__ptr__compare__common__type_3_01T1_00_01T2_00_01true_01_4.html#ae2b396ff33b6a3cfd8fb0054d0bfc387',1,'memory::__strong_rc_ptr_compare_common_type&lt; T1, T2, true &gt;::right_type'],['../d7/d9d/structmemory_1_1____strong__rc__ptr__compare__common__type_3_01T1_00_01T2_00_01false_01_4.html#a133cb3f7d75867af7a3dd6561762c538',1,'memory::__strong_rc_ptr_compare_common_type&lt; T1, T2, false &gt;::right_type']]]
+];

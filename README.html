@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>libcopp &mdash; libcopp 3.16.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/highlight.css?v=c49f072c" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=81a83c70" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f1368178"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/setup_lineno.js?v=692e05cf"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            libcopp
+              <img src="_static/icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">CHANGELOG</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example/index.html">EXAMPLES</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">libcopp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">libcopp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/README.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="libcopp">
+<h1>libcopp<a class="headerlink" href="#libcopp" title="Link to this heading"></a></h1>
+<p>Cross-platform coroutine library in C++ .</p>
+<p><a class="reference external" href="https://github.com/owent/libcopp/releases"><img alt="Release" src="https://img.shields.io/github/v/release/owent/libcopp" /></a> <a class="reference external" href="https://github.com/owent/libcopp"><img alt="Code size" src="https://img.shields.io/github/languages/code-size/owent/libcopp" /></a> <a class="reference external" href="https://github.com/owent/libcopp"><img alt="Repo size" src="https://img.shields.io/github/repo-size/owent/libcopp" /></a> <a class="reference external" href="https://github.com/owent/libcopp/actions/workflows/main.yml"><img alt="CI build status" src="https://github.com/owent/libcopp/actions/workflows/main.yml/badge.svg" /></a> <a class="reference external" href="https://codecov.io/gh/owent/libcopp"><img alt="Coveralls coverage" src="https://codecov.io/gh/owent/libcopp/branch/v2/graph/badge.svg" /></a> <a class="reference external" href="https://github.com/owent/libcopp"><img alt="Forks" src="https://img.shields.io/github/forks/owent/libcopp?style=social" /></a> <a class="reference external" href="https://github.com/owent/libcopp"><img alt="Stars" src="https://img.shields.io/github/stars/owent/libcopp?style=social" /></a></p>
+<section id="ci-job-matrix">
+<h2>CI Job Matrix<a class="headerlink" href="#ci-job-matrix" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Target System</p></th>
+<th class="head"><p>Toolchain</p></th>
+<th class="head"><p>Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p>GCC</p></td>
+<td><p>Static linking</p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p>GCC</p></td>
+<td><p>Dynamic linking</p></td>
+</tr>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p>GCC-latest</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p>GCC-latest</p></td>
+<td><p>No Exception</p></td>
+</tr>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p>GCC-latest</p></td>
+<td><p>Thread Unsafe</p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p>Clang-latest</p></td>
+<td><p>With libc++</p></td>
+</tr>
+<tr class="row-even"><td><p>MinGW64</p></td>
+<td><p>GCC</p></td>
+<td><p>Dynamic linking</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows</p></td>
+<td><p>Visual Studio 2022</p></td>
+<td><p>Static linking</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p>Visual Studio 2022</p></td>
+<td><p>Dynamic linking</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS</p></td>
+<td><p>AppleClang</p></td>
+<td><p>With libc++</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="license">
+<h2>LICENSE<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>License under the <a class="reference external" href="https://github.com/owent/libcopp/blob/v2/LICENSE">MIT LICENSE</a></p>
+</section>
+<section id="document">
+<h2>Document<a class="headerlink" href="#document" title="Link to this heading"></a></h2>
+<p>Documents can be found at <a class="reference external" href="https://libcopp.atframe.work">https://libcopp.atframe.work</a> , API references canbe found at <a class="reference external" href="https://libcopp.atframe.work/doxygen/html/">https://libcopp.atframe.work/doxygen/html/</a> .(Generated by sphinx and doxygen with <a class="reference external" href="https://github.com/owent/libcopp/blob/v2/docs/sphinx">docs/sphinx</a> and <a class="reference external" href="https://github.com/owent/libcopp/blob/v2/docs/libcopp.doxyfile.in">docs/libcopp.doxyfile.in</a>).</p>
+</section>
+<section id="upgrade-from-1-3-x-1-4-x-to-2-x">
+<h2>UPGRADE FROM 1.3.X-1.4.X to 2.X<a class="headerlink" href="#upgrade-from-1-3-x-1-4-x-to-2-x" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">value_type</span> <span class="pre">=</span> <span class="pre">int;</span></code> into <code class="docutils literal notranslate"><span class="pre">T</span></code> when using <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;T&gt;</span></code>.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">stack_allocator_t</span></code> to <code class="docutils literal notranslate"><span class="pre">stack_allocator_type</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code> when using <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;T&gt;</span></code>.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">coroutine_t</span></code> to <code class="docutils literal notranslate"><span class="pre">coroutine_type</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code> when using <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;T&gt;</span></code>.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">libcopp::util::*</span></code> to <code class="docutils literal notranslate"><span class="pre">copp::util::</span></code>.</p></li>
+<li><p>We are not allowed to use <code class="docutils literal notranslate"><span class="pre">libcopp::memory::intrusive_ptr&lt;cotask::impl::task_impl&gt;</span></code> now, please use <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;T&gt;::ptr_type</span></code> instead.</p></li>
+</ul>
+</section>
+<section id="upgrade-from-1-2-x-to-1-3-x-1-4-x">
+<h2>UPGRADE FROM 1.2.X to 1.3.X-1.4.X<a class="headerlink" href="#upgrade-from-1-2-x-to-1-3-x-1-4-x" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">cotask::task::await</span></code> into <code class="docutils literal notranslate"><span class="pre">cotask::task::await_task</span></code></p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;TCO_MACRO,</span> <span class="pre">TTASK_MACRO&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">cotask::task&lt;TCO_MACRO&gt;</span></code> , we don’t allow to custom id allocator now.</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">cotask::core::standard_int_id_allocator&lt;uint64_t&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">copp::util::uint64_id_allocator</span></code> , we don’t allow to custom id allocator now.</p></li>
+<li><p>Require gcc 4.8+, MSVC 15+(Visual Studio 2017)&gt;)</p></li>
+<li><p>Require <a class="reference external" href="https://cmake.org/">cmake</a> 3.12.0 or upper</p></li>
+</ul>
+</section>
+<section id="install">
+<h2>INSTALL<a class="headerlink" href="#install" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">libcopp use <a class="reference external" href="https://cmake.org/">cmake</a> to generate makefile and switch build tools.</div>
+</div>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>[required]</strong> GCC or Clang or MSVC or clang-cl support ISO C++ 11 and upper</p></li>
+<li><p><strong>[required]</strong> <a class="reference external" href="https://cmake.org/">cmake</a> 3.16.0 and upper</p></li>
+<li><p><strong>[optional]</strong> <a class="reference external" href="https://github.com/google/googletest">gtest</a> 1.6.0 and upper (Better unit test supported)</p></li>
+<li><p><strong>[optional]</strong> <a class="reference external" href="(http://www.boost.org/doc/libs/release/libs/test">Boost.Test</a> (Boost.Test supported)</p></li>
+</ul>
+</section>
+<section id="unix">
+<h3>Unix<a class="headerlink" href="#unix" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>[required]</strong> <code class="docutils literal notranslate"><span class="pre">ar,</span> <span class="pre">as,</span> <span class="pre">ld</span></code> (<a class="reference external" href="http://www.gnu.org/software/binutils/">binutils</a>) or <a class="reference external" href="http://llvm.org/">llvm</a></p></li>
+<li><p><strong>[optional]</strong> if using <a class="reference external" href="https://github.com/google/googletest">gtest</a> , pthread is required.</p></li>
+</ul>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>[required]</strong> masm (in MSVC)</p></li>
+<li><p><strong>[optional]</strong> if using <a class="reference external" href="https://github.com/google/googletest">gtest</a>, pthread is required.</p></li>
+</ul>
+</section>
+<section id="install-with-vcpkg">
+<h3>Install with vcpkg<a class="headerlink" href="#install-with-vcpkg" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><dl>
+<dt>Clone and setup <a class="reference external" href="https://github.com/Microsoft/vcpkg">vcpkg</a> (See more detail on <a class="reference external" href="https://github.com/Microsoft/vcpkg">https://github.com/Microsoft/vcpkg</a>)</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Microsoft/vcpkg.git
+<span class="nb">cd</span><span class="w"> </span>vcpkg
+PS&gt;<span class="w"> </span>bootstrap-vcpkg.bootstrap
+Linux:~/$<span class="w"> </span>./bootstrap-vcpkg.sh
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Install libcopp</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>PS&gt;<span class="w"> </span>.<span class="se">\v</span>cpkg<span class="w"> </span>install<span class="w"> </span>libcopp<span class="w"> </span><span class="o">[</span>--triplet<span class="w"> </span>x64-windows-static/x64-windows/x64-windows-static-md<span class="w"> </span>and<span class="w"> </span>etc...<span class="o">]</span>
+Linux:~/$<span class="w"> </span>./vcpkg<span class="w"> </span>install<span class="w"> </span>libcopp
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>See <a class="reference internal" href="index.html#usage-using-with-cmake"><span class="std std-ref">using with cmake</span></a> for cmake below.</p></li>
+</ol>
+</section>
+<section id="custom-build">
+<h3>Custom Build<a class="headerlink" href="#custom-build" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><dl>
+<dt>Clone and make a build directory</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>https://github.com/owent/libcopp.git
+mkdir<span class="w"> </span>libcopp/build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>libcopp/build
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Run cmake command</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># cmake &lt;libcopp dir&gt; [options...]</span>
+cmake<span class="w"> </span>..<span class="w"> </span>-DPROJECT_ENABLE_UNITTEST<span class="o">=</span>YES<span class="w"> </span>-DPROJECT_ENABLE_SAMPLE<span class="o">=</span>YES
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Make libcopp</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>RelWithDebInfo<span class="w"> </span><span class="c1"># or make [options] when using Makefile</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Run <code class="docutils literal notranslate"><span class="pre">test/sample/benchmark</span></code> <em>[optional]</em></dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run test =&gt; Required: PROJECT_ENABLE_UNITTEST=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.unit_test
+<span class="c1"># Run sample =&gt; Required: PROJECT_ENABLE_SAMPLE=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.sample
+<span class="c1"># Run benchmark =&gt; Required: PROJECT_ENABLE_SAMPLE=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.benchmark
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Install <em>[optional]</em></dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>RelWithDebInfo<span class="w"> </span>--target<span class="w"> </span>install<span class="w"> </span><span class="c1"># or make install when using Makefile</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Then just include and link <code class="docutils literal notranslate"><span class="pre">libcopp.*/libcotask.*</span></code>, or see <a class="reference internal" href="index.html#usage-using-with-cmake"><span class="std std-ref">using with cmake</span></a> for cmake below.</p></li>
+</ol>
+</section>
+</section>
+<section id="cmake-options">
+<h2>CMake Options<a class="headerlink" href="#cmake-options" title="Link to this heading"></a></h2>
+<p>Options can be cmake options. such as set compile toolchains, source directory or options of libcopp that control build actions. libcopp options are listed below:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BUILD_SHARED_LIBS=YES|NO</p></td>
+<td><p>[default=NO] Build dynamic library.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LIBCOPP_ENABLE_SEGMENTED_STACKS=YES|NO</p></td>
+<td><p>[default=NO] Enable split stack supported context.(it’s only availabe in linux and gcc 4.7.0 or upper)</p></td>
+</tr>
+<tr class="row-even"><td><p>LIBCOPP_ENABLE_VALGRIND=YES|NO</p></td>
+<td><p>[default=YES] Enable valgrind supported context.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PROJECT_ENABLE_UNITTEST=YES|NO</p></td>
+<td><p>[default=NO] Build unit test.</p></td>
+</tr>
+<tr class="row-even"><td><p>PROJECT_ENABLE_SAMPLE=YES|NO</p></td>
+<td><p>[default=NO] Build samples.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LIBCOPP_ENABLE_MULTI_THREAD=YES|NO</p></td>
+<td><p>[default=YES] Enable multi-thread support.</p></td>
+</tr>
+<tr class="row-even"><td><p>LIBCOTASK_ENABLE=YES|NO</p></td>
+<td><p>[default=YES] Enable build libcotask.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LIBCOPP_FCONTEXT_USE_TSX=YES|NO</p></td>
+<td><p>[default=YES] Enable <a class="reference external" href="https://software.intel.com/en-us/node/695149">Intel Transactional Synchronisation Extensions (TSX)</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>LIBCOPP_MACRO_TLS_STACK_PROTECTOR=YES|NO</p></td>
+<td><p>[default=NO] Users need set LIBCOPP_MACRO_TLS_STACK_PROTECTOR=ON when compiling with <code class="docutils literal notranslate"><span class="pre">-fstack-protector</span></code>.
+Because it changes the default context switching logic.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GTEST_ROOT=[path]</p></td>
+<td><p>set gtest library install prefix path</p></td>
+</tr>
+<tr class="row-even"><td><p>BOOST_ROOT=[path]</p></td>
+<td><p>set Boost.Test library install prefix path</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="usage">
+<h2>USAGE<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<section id="using-with-cmake">
+<span id="usage-using-with-cmake"></span><h3>Using with cmake<a class="headerlink" href="#using-with-cmake" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">set(Libcopp_ROOT</span> <span class="pre">&lt;where</span> <span class="pre">to</span> <span class="pre">find</span> <span class="pre">libcopp/INSTALL_PREFIX&gt;)</span></code></p></li>
+<li><p>Just using <a class="reference external" href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package(Libcopp)</a> to use libcopp module.</p></li>
+<li><p>Example:(we assume the target name is stored in <code class="docutils literal notranslate"><span class="pre">${CUSTOM_TARGET_NAME}</span></code>)</p></li>
+</ol>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">Libcopp</span><span class="w"> </span><span class="s">CONFIG</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="o">${</span><span class="nv">CUSTOM_TARGET_NAME</span><span class="o">}</span><span class="w"> </span><span class="s">libcopp::cotask</span><span class="p">)</span>
+<span class="c"># Or just using copp by target_link_libraries(${CUSTOM_TARGET_NAME} libcopp::copp)</span>
+</pre></div>
+</div>
+<p>If using MSVC and vcpkg, CRT must match the triplet of vcpkg, these codes below may be helpful:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">MSVC</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">VCPKG_TOOLCHAIN</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">if</span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">ENV{VCPKG_DEFAULT_TRIPLET}</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="s">DEFINED</span><span class="w"> </span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="w"> </span><span class="s2">&quot;$ENV{VCPKG_DEFAULT_TRIPLET}&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endif</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;^.*windows-static$&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_MSVC_RUNTIME_LIBRARY</span><span class="w"> </span><span class="s2">&quot;MultiThreaded$&lt;$&lt;CONFIG:Debug&gt;:Debug&gt;&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">else</span><span class="w"> </span><span class="p">()</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_MSVC_RUNTIME_LIBRARY</span><span class="w"> </span><span class="s2">&quot;MultiThreaded$&lt;$&lt;CONFIG:Debug&gt;:Debug&gt;DLL&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+<span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+</pre></div>
+</div>
+<p>See more detail on <a class="reference external" href="https://github.com/Microsoft/vcpkg/tree/master/ports/libcopp">https://github.com/Microsoft/vcpkg/tree/master/ports/libcopp</a> .</p>
+</section>
+<section id="directly-use-headers-and-libraries">
+<h3>Directly use headers and libraries<a class="headerlink" href="#directly-use-headers-and-libraries" title="Link to this heading"></a></h3>
+<p>Just include headers and linking library file of your platform to use libcopp.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">LIBCOPP_PREFIX</span><span class="o">=</span>&lt;WHERE<span class="w"> </span>TO<span class="w"> </span>INSTALL<span class="w"> </span>libcopp&gt;
+
+<span class="c1"># Example command for build sample with gcc 4.9 or upper on Linux</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>sample_readme_*.cpp<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>g++<span class="w"> </span>-std<span class="o">=</span>c++14<span class="w"> </span>-O2<span class="w"> </span>-g<span class="w"> </span>-ggdb<span class="w"> </span>-Wall<span class="w"> </span>-Werror<span class="w"> </span>-fPIC<span class="w"> </span>-rdynamic<span class="w"> </span>-fdiagnostics-color<span class="o">=</span>auto<span class="w"> </span>-Wno-unused-local-typedefs<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span>-L<span class="nv">$LIBCOPP_PREFIX</span>/lib64<span class="w"> </span>-lcopp<span class="w"> </span>-lcotask<span class="w"> </span><span class="nv">$source</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$source</span>.exe<span class="p">;</span>
+<span class="k">done</span>
+
+<span class="c1"># Example command for build sample with clang 3.9 or upper and libc++ on Linux</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>sample_readme_*.cpp<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>clang++<span class="w"> </span>-std<span class="o">=</span>c++17<span class="w"> </span>-stdlib<span class="o">=</span>libc++<span class="w"> </span>-O2<span class="w"> </span>-g<span class="w"> </span>-ggdb<span class="w"> </span>-Wall<span class="w"> </span>-Werror<span class="w"> </span>-fPIC<span class="w"> </span>-rdynamic<span class="w">        </span><span class="se">\</span>
+<span class="w">        </span>-I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span>-L<span class="nv">$LIBCOPP_PREFIX</span>/lib64<span class="w"> </span>-lcopp<span class="w"> </span>-lcotask<span class="w"> </span>-lc++<span class="w"> </span>-lc++abi<span class="w">  </span><span class="se">\</span>
+<span class="w">        </span><span class="nv">$source</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$source</span>.exe<span class="p">;</span>
+<span class="k">done</span>
+
+<span class="c1"># AppleClang on macOS just like those scripts upper.</span>
+<span class="c1"># If you are using MinGW on Windows, it&#39;s better to add -static-libstdc++ -static-libgcc to</span>
+<span class="c1">#     use static linking and other scripts are just like those on Linux.</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example command for build sample with MSVC 1914 or upper on Windows &amp; powershell(Debug Mode /MDd)</span>
+foreach<span class="w"> </span><span class="o">(</span><span class="nv">$source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>Get-ChildItem<span class="w"> </span>-File<span class="w"> </span>-Name<span class="w"> </span>.<span class="se">\s</span>ample_readme_*.cpp<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>cl<span class="w"> </span>/nologo<span class="w"> </span>/MP<span class="w"> </span>/W4<span class="w"> </span>/wd<span class="s2">&quot;4100&quot;</span><span class="w"> </span>/wd<span class="s2">&quot;4125&quot;</span><span class="w"> </span>/EHsc<span class="w"> </span>/std:c++17<span class="w"> </span>/Zc:__cplusplus<span class="w"> </span>/O2<span class="w"> </span>/MDd<span class="w"> </span>/I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span><span class="nv">$LIBCOPP_PREFIX</span>/lib64/copp.lib<span class="w"> </span><span class="nv">$LIBCOPP_PREFIX</span>/lib64/cotask.lib<span class="w"> </span><span class="nv">$source</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="get-start-example">
+<h3>Get Start &amp; Example<a class="headerlink" href="#get-start-example" title="Link to this heading"></a></h3>
+<p>There serveral samples to use <code class="docutils literal notranslate"><span class="pre">copp::coroutine_context</span></code> 、 <code class="docutils literal notranslate"><span class="pre">copp::coroutine_context_fiber</span></code> and <code class="docutils literal notranslate"><span class="pre">cotask::task</span></code> :</p>
+<ol class="arabic simple">
+<li><p>Using coroutine context</p></li>
+<li><p>Using coroutine task</p></li>
+<li><p>Using coroutine task manager</p></li>
+<li><p>Using stack pool</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">task::then</span></code> or <code class="docutils literal notranslate"><span class="pre">task::await_task</span></code></p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">copp::callable_promise</span></code> of c++20 coroutine</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">copp::generator_future</span></code> for c++20 coroutine</p></li>
+<li><p>Custom error (timeout for example) when using c++20 coroutine</p></li>
+<li><p>Let c++20 coroutine work with <code class="docutils literal notranslate"><span class="pre">cotask::task</span></code></p></li>
+<li><p>Using Windows fiber and <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> on Windows with <code class="docutils literal notranslate"><span class="pre">cotask::task</span></code></p></li>
+<li><p>Using c++20 coroutine with channel receiver and sender</p></li>
+<li><p>Using stackful coroutine task with channel receiver and sender</p></li>
+</ol>
+<p>All sample codes can be found on <a class="reference internal" href="example/index.html#examples-doc-anchor"><span class="std std-ref">EXAMPLES</span></a> and <a class="reference external" href="https://github.com/owent/libcopp/tree/v2/sample">sample</a> .</p>
+</section>
+</section>
+<section id="notice">
+<h2>NOTICE<a class="headerlink" href="#notice" title="Link to this heading"></a></h2>
+<p>Split stack support: if in Linux and user gcc 4.7.0 or upper, add <code class="docutils literal notranslate"><span class="pre">-DLIBCOPP_ENABLE_SEGMENTED_STACKS=YES</span></code> to use split stack supported context.</p>
+<p>It’s recommanded to use stack pool instead of gcc splited stack.</p>
+</section>
+<section id="benchmark">
+<h2>BENCHMARK<a class="headerlink" href="#benchmark" title="Link to this heading"></a></h2>
+<p>Please see CI output for latest benchmark report. Click to visit <a class="reference external" href="https://github.com/owent/libcopp/actions">Github Actions</a> .</p>
+</section>
+<section id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h2>
+<p>Q: How to enable c++20 coroutine</p>
+<div class="line-block">
+<div class="line">ANS: Add <code class="docutils literal notranslate"><span class="pre">/std:c++latest</span> <span class="pre">/await</span></code> for MSVC 1932 and below or <code class="docutils literal notranslate"><span class="pre">-std=c++20</span> <span class="pre">-fcoroutines-ts</span> <span class="pre">-stdlib=libc++</span></code> for clang 13 and below or <code class="docutils literal notranslate"><span class="pre">-std=c++20</span> <span class="pre">-fcoroutines</span></code> for gcc 10.</div>
+</div>
+<p>If you can just use <code class="docutils literal notranslate"><span class="pre">-std=c++20</span> <span class="pre">-stdlib=libc++</span></code> clang 14 or above, <code class="docutils literal notranslate"><span class="pre">-astd=c++20</span></code> for gcc 11 or above, and <code class="docutils literal notranslate"><span class="pre">/std:c++latest</span></code> for MSVC 1932 or above.</p>
+<p>Q: Will libcopp handle exception?</p>
+<div class="line-block">
+<div class="line">ANS: When using c++11 or above, libcopp will catch all unhandled exception and rethrow it after coroutine resumed.</div>
+</div>
+<p>Q: Why <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> can not catch the unhandled exception in a coroutine?</p>
+<div class="line-block">
+<div class="line">ANS: <code class="docutils literal notranslate"><span class="pre">SetUnhandledExceptionFilter</span></code> only works with <strong>Windows Fiber</strong>, please see <a class="reference external" href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_11.cpp">sample/sample_readme_11.cpp</a> for details.</div>
+</div>
+</section>
+<section id="feedback">
+<h2>FEEDBACK<a class="headerlink" href="#feedback" title="Link to this heading"></a></h2>
+<p>If you has any question, please create a issue and provide the information of your environments. For example:</p>
+<ul class="simple">
+<li><p><strong>OS</strong>: Windows 10 Pro 19041 <em>(This can be see after running ``msinfo32``)</em> / Manjaro(Arch) Linux Linux 5.4.39-1-MANJARO</p></li>
+<li><p><strong>Compiler</strong>: Visual Studio 2022 C++ 17.14.6 with VS 2022 C++ v14.38 or MSVC 1925/ gcc 9.3.0</p></li>
+<li><p><strong>CMake Commands</strong>: <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">&quot;Visual</span> <span class="pre">Studio</span> <span class="pre">17</span> <span class="pre">2022&quot;</span> <span class="pre">-A</span> <span class="pre">x64</span> <span class="pre">-DLIBCOPP_FCONTEXT_USE_TSX=ON</span> <span class="pre">-DPROJECT_ENABLE_UNITTEST=ON</span> <span class="pre">-DPROJECT_ENABLE_SAMPLE=ON-DCMAKE_BUILD_TYPE=RelWithDebInfo</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=%cd%/install-prefix</span></code> / <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">..</span> <span class="pre">-G</span> <span class="pre">Ninja</span> <span class="pre">-DLIBCOPP_FCONTEXT_USE_TSX=ON</span> <span class="pre">-DPROJECT_ENABLE_UNITTEST=ON</span> <span class="pre">-DPROJECT_ENABLE_SAMPLE=ON</span> <span class="pre">-DCMAKE_BUILD_TYPE=RelWithDebInfo</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/opt/libcopp</span></code></p></li>
+<li><p><strong>Compile Commands</strong>: <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span> <span class="pre">.</span> <span class="pre">-j</span></code></p></li>
+<li><p><strong>Related Environment Variables</strong>: Please provide all the environment variables which will change the cmake toolchain, <code class="docutils literal notranslate"><span class="pre">CC</span></code> 、 <code class="docutils literal notranslate"><span class="pre">CXX</span></code> 、 <code class="docutils literal notranslate"><span class="pre">AR</span></code> and etc.</p></li>
+</ul>
+</section>
+<section id="constributors">
+<h2>CONSTRIBUTORS<a class="headerlink" href="#constributors" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/owent">owent</a></p></li>
+</ul>
+</section>
+<section id="thanks-to">
+<h2>THANKS TO<a class="headerlink" href="#thanks-to" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mutouyun">mutouyun</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, libcopp.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<map id="/home/runner/work/libcopp/libcopp/test/cli/cmd_option_value.h" name="/home/runner/work/libcopp/libcopp/test/cli/cmd_option_value.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,5,449,60"/>
+<area shape="rect" id="Node000002" href="$d0/dfa/cmd__option__list_8h.html" title=" " alt="" coords="106,115,346,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="307,71,251,117,247,113,304,67"/>
+<area shape="rect" id="Node000009" href="$d6/d0d/cmd__option__value_8cpp.html" title=" " alt="" coords="371,108,572,163"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="393,67,441,106,438,110,390,71"/>
+<area shape="rect" id="Node000003" href="$d7/dbc/cmd__option_8h.html" title=" " alt="" coords="225,416,438,456"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,158,381,179,411,209,432,250,437,287,429,326,411,369,391,397,366,418,362,414,387,393,406,367,424,324,432,287,427,252,407,212,378,183,341,163"/>
+<area shape="rect" id="Node000004" href="$df/dfa/cmd__option__list_8cpp.html" title=" " alt="" coords="5,504,207,559"/>
+<area shape="poly" id="edge11_Node000002_Node000004" title=" " alt="" coords="201,168,172,212,144,292,125,375,115,449,110,504,105,504,110,449,120,374,139,291,168,209,196,165"/>
+<area shape="rect" id="Node000007" href="$df/d24/cmd__option__bind__param__list_8h.html" title=" " alt="" coords="195,211,396,265"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="249,165,279,209,275,212,244,168"/>
+<area shape="rect" id="Node000008" href="$d5/d02/cmd__option__bindt__base_8h.html" title=" " alt="" coords="195,313,396,368"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="205,168,191,190,181,215,178,240,184,264,206,291,234,311,231,315,202,294,180,267,173,240,176,213,187,187,200,165"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="274,464,170,506,168,501,272,459"/>
+<area shape="rect" id="Node000005" href="$d0/dfb/cmd__option__phoenix_8h.html" title=" " alt="" coords="231,504,432,559"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="334,469,334,504,329,504,329,469"/>
+<area shape="rect" id="Node000006" href="$d3/d00/test__manager_8cpp.html" title=" " alt="" coords="303,607,499,661"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="401,460,427,478,447,503,454,530,450,558,439,585,424,608,420,605,434,582,445,557,449,530,442,505,423,482,397,464"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="360,569,385,605,380,608,355,572"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="298,279,298,313,293,313,293,279"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="313,380,327,415,322,417,308,382"/>
+</map>

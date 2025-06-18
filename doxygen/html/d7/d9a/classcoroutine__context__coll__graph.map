@@ -1,0 +1,7 @@
+<map id="coroutine_context" name="coroutine_context">
+<area shape="rect" id="Node000001" title="base type of all stackful coroutine context" alt="" coords="115,707,281,1152"/>
+<area shape="rect" id="Node000002" href="$d8/dad/classcoroutine__context__base.html" title="base type of all coroutine context" alt="" coords="5,5,199,644"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,657,165,706,160,707,152,658"/>
+<area shape="rect" id="Node000003" href="$db/dde/structstack__context.html" title=" " alt="" coords="223,212,365,437"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,438,239,690,233,690,274,437"/>
+</map>
