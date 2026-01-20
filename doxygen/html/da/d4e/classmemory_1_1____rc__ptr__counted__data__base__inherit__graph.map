@@ -1,0 +1,13 @@
+<map id="memory::__rc_ptr_counted_data_base" name="memory::__rc_ptr_counted_data_base">
+<area shape="rect" id="Node000001" title=" " alt="" coords="427,5,613,389"/>
+<area shape="rect" id="Node000002" href="$da/d34/classmemory_1_1____rc__ptr__counted__data__default.html" title="Template class definition for reference&#45;counted." alt="" coords="5,495,192,629"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,271,312,349,206,439,153,496,149,492,202,435,309,345,414,267"/>
+<area shape="rect" id="Node000003" href="$db/dee/classmemory_1_1____rc__ptr__counted__data__inplace.html" title="Template class definition for reference&#45;counted.(inplacement)" alt="" coords="216,475,403,649"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="422,372,362,476,357,473,417,370"/>
+<area shape="rect" id="Node000004" href="$db/d0d/classmemory_1_1____rc__ptr__counted__data__inplace__alloc.html" title="Template class definition for reference&#45;counted with allocator.(inplacement)" alt="" coords="427,437,613,687"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="523,403,523,437,517,437,517,403"/>
+<area shape="rect" id="Node000005" href="$d7/d65/classmemory_1_1____rc__ptr__counted__data__with__deleter.html" title="Template class definition for reference&#45;counted with deletor." alt="" coords="637,477,824,647"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="623,370,684,476,680,478,618,373"/>
+<area shape="rect" id="Node000006" href="$de/d29/classmemory_1_1____rc__ptr__counted__data__with__deleter__allocator.html" title="Template class definition for reference&#45;counted with deletor and allocator." alt="" coords="848,467,1051,657"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="626,268,731,346,838,435,869,465,865,469,834,439,727,350,623,273"/>
+</map>

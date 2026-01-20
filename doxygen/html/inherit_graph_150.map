@@ -1,0 +1,25 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,474,117,499"/>
+<area shape="rect" id="Node000001" href="$d4/d8f/structfuture_1_1compact__storage_3_01T_00_01std_1_1unique__ptr_3_01T_00_01small__object__optimiz520a9dbec7a2d9f31e0f53460ba9ca9e.html" title=" " alt="" coords="191,5,390,75"/>
+<area shape="poly" id="edge46_Node000000_Node000001" title=" " alt="" coords="59,460,61,388,73,288,86,234,105,181,130,130,163,85,189,64,192,69,167,89,135,133,110,183,91,236,78,289,66,388,64,460"/>
+<area shape="rect" id="Node000002" href="$d3/d7d/structfuture_1_1poll__storage__base_3_01T_00_01std_1_1unique__ptr_3_01T_00_01small__object__opti1ec6f97e58bccea9d85ff9922a36085c.html" title=" " alt="" coords="193,99,388,183"/>
+<area shape="poly" id="edge47_Node000000_Node000002" title=" " alt="" coords="62,460,70,406,88,335,117,260,138,225,163,193,192,171,195,175,167,197,143,228,122,262,93,336,76,407,68,461"/>
+<area shape="rect" id="Node000003" href="$de/ddf/structfuture_1_1poll__storage__base_3_01void_00_01std_1_1unique__ptr_3_01void_00_01small__objectc8d2609e640730947d435e0f7d6c5860.html" title=" " alt="" coords="193,207,388,291"/>
+<area shape="poly" id="edge48_Node000000_Node000003" title=" " alt="" coords="69,460,103,383,130,340,164,302,191,282,194,286,167,306,134,343,107,386,74,462"/>
+<area shape="rect" id="Node000004" href="$d0/dd1/structgsl_1_1detail_1_1is__specialized__span__convertible_3_01T_0fN_0e_4.html" title=" " alt="" coords="193,316,388,356"/>
+<area shape="poly" id="edge49_Node000000_Node000004" title=" " alt="" coords="75,461,111,412,136,387,164,366,192,352,194,357,167,370,140,391,115,416,80,464"/>
+<area shape="rect" id="Node000005" href="$da/d05/structgsl_1_1detail_1_1is__specialized__span__convertible_3_01span_3_01T_00_01EXTENT_01_4_01_4.html" title=" " alt="" coords="197,381,384,435"/>
+<area shape="poly" id="edge50_Node000000_Node000005" title=" " alt="" coords="106,466,164,444,198,433,200,438,166,449,107,471"/>
+<area shape="rect" id="Node000006" href="$d8/dcc/structgsl_1_1detail_1_1is__specialized__span__convertible_3_01std_1_1array_3_01T_00_01N_01_4_01_4.html" title=" " alt="" coords="198,459,383,514"/>
+<area shape="poly" id="edge51_Node000000_Node000006" title=" " alt="" coords="131,484,198,484,198,489,131,489"/>
+<area shape="rect" id="Node000007" href="$d8/dc4/structgsl_1_1details_1_1is__comparable__to__nullptr_3_01T_00_01typename_01std_1_1enable__if_3_012175c735d496ac523ba724aefb7eca88.html" title=" " alt="" coords="191,539,390,637"/>
+<area shape="poly" id="edge52_Node000000_Node000007" title=" " alt="" coords="105,503,192,542,190,547,103,507"/>
+<area shape="rect" id="Node000008" href="$d2/d34/structnostd_1_1____is__nullability__compatible_3_01T_00_01void__t_3_01typename_01T_1_1nullability__compatible__type_01_4_01_4.html" title=" " alt="" coords="197,661,384,731"/>
+<area shape="poly" id="edge53_Node000000_Node000008" title=" " alt="" coords="75,511,110,579,136,615,167,647,198,667,195,671,164,651,131,619,105,581,70,513"/>
+<area shape="rect" id="Node000009" href="$da/d7a/structstackful__inject__awaitable_3_01stackful__channel__receiver_3_01TVALUE_01_4_01_4.html" title=" " alt="" coords="187,755,394,810"/>
+<area shape="poly" id="edge54_Node000000_Node000009" title=" " alt="" coords="68,512,78,561,95,622,124,686,144,715,167,741,189,756,185,760,164,745,140,718,120,688,90,624,72,562,63,513"/>
+<area shape="rect" id="Node000010" href="$d6/d2b/structtype__traits_1_1is__shared__ptr_3_01LIBCOPP__COPP__NAMESPACE__ID_1_1memory_1_1strong__rc__ptr_3_01T_01_4_01_4.html" title=" " alt="" coords="165,834,416,889"/>
+<area shape="poly" id="edge55_Node000000_Node000010" title=" " alt="" coords="66,513,70,575,85,657,98,701,116,744,138,784,167,819,182,832,179,836,163,823,134,787,111,746,93,703,80,658,65,576,60,513"/>
+<area shape="rect" id="Node000011" href="$de/d1f/structtype__traits_1_1is__shared__ptr_3_01std_1_1shared__ptr_3_01T_01_4_01_4.html" title=" " alt="" coords="209,913,372,967"/>
+<area shape="poly" id="edge56_Node000000_Node000011" title=" " alt="" coords="69,513,81,600,102,715,131,826,148,869,167,898,187,914,210,925,208,930,184,918,163,902,144,871,126,828,97,716,76,600,63,513"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="/home/runner/work/libcopp/libcopp/include/libcopp/fcontext/all.hpp" name="/home/runner/work/libcopp/libcopp/include/libcopp/fcontext/all.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="59,5,255,60"/>
+<area shape="rect" id="Node000002" href="$de/de7/fcontext_8hpp.html" title=" " alt="" coords="50,108,264,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,60,160,94,154,94,154,60"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="392,357,578,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,136,49,153,31,166,17,183,9,208,9,246,15,283,26,308,49,324,83,337,174,357,279,368,379,373,378,378,278,373,173,362,81,343,46,329,22,311,10,285,4,247,4,208,12,180,27,162,46,149,88,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="27,189,98,214"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="145,136,89,182,86,178,141,131"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="122,189,192,214"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="160,134,160,175,154,175,154,134"/>
+<area shape="rect" id="Node000006" href="$d8/dfd/config_8hpp.html" title=" " alt="" coords="217,181,385,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="180,131,256,172,253,177,177,136"/>
+<area shape="rect" id="Node000010" href="$de/d47/features_8h.html" title=" " alt="" coords="409,189,580,214"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="207,131,433,183,431,188,206,136"/>
+<area shape="rect" id="Node000007" href="$de/ddb/stl__include__prefix_8h.html" title=" " alt="" coords="36,269,188,309"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="261,224,167,266,164,261,258,219"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="212,277,272,302"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="290,223,260,266,256,263,286,220"/>
+<area shape="rect" id="Node000009" href="$d4/d4b/stl__include__suffix_8h.html" title=" " alt="" coords="296,269,447,309"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="319,220,350,257,346,261,315,223"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="496,214,490,344,484,343,491,214"/>
+<area shape="rect" id="Node000011" href="$d8/dc2/errno_8h.html" title=" " alt="" coords="523,277,591,302"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="505,213,543,264,538,267,501,216"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="549,304,512,348,508,345,545,300"/>
+</map>

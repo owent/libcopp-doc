@@ -1,0 +1,3 @@
+<map id="memory::compat_strong_ptr_type_trait&lt; T, PtrMode &gt;" name="memory::compat_strong_ptr_type_trait&lt; T, PtrMode &gt;">
+<area shape="rect" id="Node000001" title="A simple helper trait class to switch between strong_rc_ptr and std::shared_ptr." alt="" coords="5,5,215,85"/>
+</map>

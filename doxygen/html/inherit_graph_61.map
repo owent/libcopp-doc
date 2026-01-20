@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$d3/d31/classmemory_1_1____rc__ptr__counted__data__base.html" title=" " alt="" coords="5,141,200,181"/>
+<area shape="rect" id="Node000001" href="$da/d34/classmemory_1_1____rc__ptr__counted__data__default.html" title="Template class definition for reference&#45;counted." alt="" coords="256,5,451,45"/>
+<area shape="poly" id="edge23_Node000000_Node000001" title=" " alt="" coords="136,130,186,92,247,55,275,43,277,48,249,60,189,96,139,135"/>
+<area shape="rect" id="Node000002" href="$db/dee/classmemory_1_1____rc__ptr__counted__data__inplace.html" title="Template class definition for reference&#45;counted.(inplacement)" alt="" coords="256,69,451,109"/>
+<area shape="poly" id="edge24_Node000000_Node000002" title=" " alt="" coords="185,135,282,107,284,112,187,140"/>
+<area shape="rect" id="Node000003" href="$db/d0d/classmemory_1_1____rc__ptr__counted__data__inplace__alloc.html" title="Template class definition for reference&#45;counted with allocator.(inplacement)" alt="" coords="256,134,451,189"/>
+<area shape="poly" id="edge25_Node000000_Node000003" title=" " alt="" coords="214,159,256,159,256,164,214,164"/>
+<area shape="rect" id="Node000004" href="$d7/d65/classmemory_1_1____rc__ptr__counted__data__with__deleter.html" title="Template class definition for reference&#45;counted with deletor." alt="" coords="256,213,451,267"/>
+<area shape="poly" id="edge26_Node000000_Node000004" title=" " alt="" coords="181,183,266,210,265,215,179,188"/>
+<area shape="rect" id="Node000005" href="$de/d29/classmemory_1_1____rc__ptr__counted__data__with__deleter__allocator.html" title="Template class definition for reference&#45;counted with deletor and allocator." alt="" coords="248,291,459,346"/>
+<area shape="poly" id="edge27_Node000000_Node000005" title=" " alt="" coords="136,189,187,233,249,276,274,289,271,293,247,281,184,237,132,193"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$d6/d97/classimpl_1_1task__action__impl.html" title=" " alt="" coords="5,77,176,102"/>
+<area shape="rect" id="Node000001" href="$df/d21/classtask__action__function.html" title=" " alt="" coords="245,5,402,45"/>
+<area shape="poly" id="edge18_Node000000_Node000001" title=" " alt="" coords="150,70,249,43,251,48,152,76"/>
+<area shape="rect" id="Node000002" href="$da/de1/classtask__action__functor.html" title=" " alt="" coords="248,69,399,109"/>
+<area shape="poly" id="edge19_Node000000_Node000002" title=" " alt="" coords="190,87,248,87,248,92,190,92"/>
+<area shape="rect" id="Node000003" href="$dd/d6d/classtask__action__mem__function.html" title=" " alt="" coords="224,133,423,173"/>
+<area shape="poly" id="edge20_Node000000_Node000003" title=" " alt="" coords="152,103,251,131,249,136,150,108"/>
+</map>

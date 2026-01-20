@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://libcopp.atframe.work/changelog/">
+      
+      
+        <link rel="prev" href="../reference/">
+      
+      
+        <link rel="next" href="../benchmarks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Changelog - libcopp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/highlight.css">
+    
+      <link rel="stylesheet" href="../assets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="libcopp" class="md-header__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="../assets/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            libcopp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="libcopp" class="md-nav__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="../assets/icon.png" alt="logo">
+
+    </a>
+    libcopp
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#231" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#230" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-2020-07-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 (2020-07-06)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-2020-07-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.0 (2020-07-02)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.0 (2020-07-02)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-changes-upgrade-guide-from-12x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BREAK CHANGES &amp; UPGRADE GUIDE FROM 1.2.X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-2019-10-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 (2019-10-04)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2019-08-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.0 (2019-08-20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-12-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2018-12-07
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-01-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2018-01-01
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-10-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-10-01
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-06-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-06-11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-05-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-05-10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-06-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2016-06-16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-02-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2016-02-27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2015-12-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2015-12-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2014-07-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2014-07-25
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benchmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#231" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#230" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-2020-07-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 (2020-07-06)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-2020-07-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.0 (2020-07-02)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.0 (2020-07-02)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-changes-upgrade-guide-from-12x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BREAK CHANGES &amp; UPGRADE GUIDE FROM 1.2.X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-2019-10-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 (2019-10-04)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2019-08-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.0 (2019-08-20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-12-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2018-12-07
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-01-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2018-01-01
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-10-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-10-01
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-06-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-06-11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017-05-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2017-05-10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-06-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2016-06-16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-02-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2016-02-27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2015-12-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2015-12-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2014-07-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2014-07-25
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">CHANGELOG<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="232">2.3.2<a class="headerlink" href="#232" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Rewrite document.</li>
+<li>Support cmake 4+.</li>
+</ol>
+<h2 id="231">2.3.1<a class="headerlink" href="#231" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Fixes storage types in <code>generator_vtable</code>.</li>
+<li>Fixes format rule.</li>
+</ol>
+<h2 id="230">2.3.0<a class="headerlink" href="#230" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Rename all macros <code>COPP_*</code> to <code>LIBCOPP_*</code> .</li>
+<li>Make all macros in compile_optimize.h and explicit_declare. standalone from atframework.</li>
+<li>Merge boost.fcontext 1.87.</li>
+<li>Remove <code>LIBCOPP_MACRO_HAS_EXCEPTION</code>.</li>
+<li>Add nostd type_traits and <code>strong_rc_ptr</code> for non thread-safety smart pointer.</li>
+<li>Remove <code>LIBCOPP_DISABLE_ATOMIC_LOCK</code>, <code>LIBCOPP_LOCK_DISABLE_THIS_MT</code> and <code>LIBCOPP_LOCK_DISABLE_MT</code>. We use the only one option <code>LIBCOPP_ENABLE_MULTI_THREAD</code> now.</li>
+<li>Allow to disable multi-thread support for stack pool and C++20 coroutine to reduce cache miss.</li>
+<li>We allow use lightweight callback or channel mode(without callback) for C++20 coroutine generator.</li>
+<li>Add <code>copp::make_channel&lt;T&gt;()</code> to create channel receiver and sender for easier usage.</li>
+</ol>
+<h2 id="220">2.2.0<a class="headerlink" href="#220" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Merge boost.fcontext 1.81.0</li>
+<li>Add <code>LIBCOPP_MACRO_TLS_STACK_PROTECTOR</code> to work with <code>-fstack-protector</code></li>
+<li>Optimize <code>-pthread</code> flag detection.</li>
+<li>Support <code>-fno-rtti</code> now.</li>
+<li>Optimize timestamp of generated file to reduce regeneration.</li>
+</ol>
+<h2 id="214">2.1.4<a class="headerlink" href="#214" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Fixes timer reset when initialization.(#46 )</li>
+<li>Update CI environment of GCC 4.8.</li>
+<li>Add more strict warnings.</li>
+<li>Optimize spin lock, add <code>valid()</code> for <code>task_promise</code>(C++ 20 coroutine).</li>
+<li>Fix consistent of variant detection.</li>
+</ol>
+<h2 id="212">2.1.2<a class="headerlink" href="#212" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Update cmake-toolset</li>
+<li>Implement <code>unhandled_exception</code> when without exception.</li>
+</ul>
+<h2 id="211">2.1.1<a class="headerlink" href="#211" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add helper function to pick task id and private data from C++20 coroutine task</li>
+<li>Fix trivial test</li>
+<li>Fix <code>Valgrind_ROOT</code></li>
+<li>Fix compatibility of GCC SFINAE</li>
+<li>[CI] Add CodeQL job</li>
+<li>[CI] Add auto stale job</li>
+<li>[CI] Update linux image to ubuntu 22.04</li>
+</ul>
+<h2 id="210">2.1.0<a class="headerlink" href="#210" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Allow custom <code>promise_error_transform</code> for C++20 coroutine.</li>
+</ol>
+<h2 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Add benchmark for <code>task_future</code></li>
+<li>Fix lifetime of <code>task_future</code></li>
+</ol>
+<h2 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Change <code>task_manager&lt;task_type, container_type&gt;</code> to <code>task_manager&lt;task_type&gt;</code></li>
+</ol>
+<h2 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Add ABI tag for all c++ codes<blockquote>
+<p>We will keep ABI compatitablity for all assemblly APIs and will change the suffix when ABI changed.</p>
+</blockquote>
+</li>
+<li><code>cotask::task</code> changes</li>
+<li>[x] Add <code>value_type</code> to task_macro ( <code>macro_coroutine</code> )</li>
+<li>[Previous] Redesign C++ 20 coroutine support.</li>
+<li>Using ctest to maintain test and samples</li>
+<li>Fix compatibility for C++20 attributes and macros</li>
+<li>[BREAK CHANGES] Rename <code>LIBCOPP_DISABLE_THIS_MT</code> to <code>LIBCOPP_LOCK_DISABLE_THIS_MT</code></li>
+</ol>
+<h2 id="150">1.5.0<a class="headerlink" href="#150" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[BREAK CHANGES] We need gcc 4.8+, Clang 4.0+ or MSVC 1900(Visual Studio 2017)+</li>
+<li>Remove <code>COPP_MACRO_ENABLE_VARIADIC_TEMPLATE</code></li>
+<li>Remove <code>STD_DECLTYPE</code> , <code>COPP_MACRO_TYPEOF</code></li>
+<li>Remove <code>libcopp/utils/std/decltype.h</code></li>
+<li>Remove <code>libcopp/utils/config/compiler_features.h</code></li>
+<li>Remove <code>libcopp/utils/std/functional.h</code></li>
+<li>Remove <code>libcopp/utils/std/smart_ptr.h</code></li>
+</ol>
+<h2 id="141">1.4.1<a class="headerlink" href="#141" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] Allow to download submodule by external tool and do not depend <code>git</code>.</li>
+</ol>
+<h2 id="140">1.4.0<a class="headerlink" href="#140" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] Switch build system to to <a href="https://github.com/atframework/cmake-toolset">cmake-toolset</a></li>
+<li>[FIX] Fix output names of <code>find_package(&lt;PackageName&gt;)</code></li>
+<li>[OPTIMIZE] Support auto detection of ios/android toolchains</li>
+<li>[OPTIMIZE] Fix warnings when using cmake 3.20.0 or upper</li>
+<li>[OPTIMIZE] Optimize cmake config PATH for <code>&lt;PackageName&gt;_DIR</code></li>
+<li>[BREAK] Upgrade cmake requirement to 3.16.0+</li>
+<li>[CI] Move to github action</li>
+<li>[BOOST] Merge boost.context 1.76.0.</li>
+</ol>
+<h2 id="135">1.3.5<a class="headerlink" href="#135" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[FIX] Fix stack alignment.</li>
+<li>[OPTIMIZE] Prefer to use python3 on cmake scripts.</li>
+</ol>
+<h2 id="134">1.3.4<a class="headerlink" href="#134" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[FIX] Fix version tag.</li>
+</ol>
+<h2 id="133">1.3.3<a class="headerlink" href="#133" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[BOOST] Merge boost.context 1.74.0(Support The 32-bit Solaris C language data model, called ILP32).</li>
+<li>[FIX] Fix mixed some headers with <a href="https://github.com/atframework/cmake-toolset">atframe_utils</a> .</li>
+<li>[OPTIMIZE] Some optimizations for benchmark codes.</li>
+<li>[FIX] Fix multi-thread counter of unit test.</li>
+<li>[OPTIMIZE] Support cpack to generate rpm or deb package.</li>
+<li>[FIX] Fix c++20 coroutine flags when reimport CompilerOption.cmake.</li>
+</ol>
+<h2 id="132">1.3.2<a class="headerlink" href="#132" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[FIX] <a href="https://github.com/owent/libcopp/issues/16">#16</a> : document of  <code>LIBCOPP_DISABLE_ATOMIC_LOCK</code> and <code>LIBCOPP_DISABLE_THIS_MT</code> .</li>
+<li>[FIX] <a href="https://github.com/owent/libcopp/issues/18">#18</a> : <code>'xx' is not a member of 'xxx {aka xxx}'</code> .</li>
+<li>[OPTIMIZE] <code>cotask::task</code> can capture all integer type of return value now.</li>
+<li>[FIX] Remove warning of c++20 coroutine options when project use both languages of cxx and not cxx</li>
+</ol>
+<h2 id="131-2020-07-06">1.3.1 (2020-07-06)<a class="headerlink" href="#131-2020-07-06" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Fix compiler version checker for C++20 coroutine</li>
+<li>Add cmake interface option and features for targets</li>
+<li>Update documents</li>
+</ol>
+<h2 id="130-2020-07-02">1.3.0 (2020-07-02)<a class="headerlink" href="#130-2020-07-02" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] Using cmake export to generate module files</li>
+<li>[OPTIMIZE] Change default visibility of symbols to hidden, we support dll on windows now.</li>
+<li>[FIX] Rename <code>task::await`` into</code>task::await_task<code>, Some compile don't allow</code>await_task` as function name.</li>
+<li>[BOOST] Merge boost.context 1.73.0</li>
+<li>[FEATURE] Implement context of windows fiber and <code>SetUnhandledExceptionFilter</code> is available to catchunhandled exception in coroutine action</li>
+<li>[OPTIMIZE] Catch and rethrow unhandle exception after coroutine resumed when using C++11 or upper, most APIs are exception safe now.</li>
+<li>[OPTIMIZE] Remove TTASK_MACRO in cotask::task, task id now is always set <code>uint64_t</code> and use the id allocator with thread cache.</li>
+<li>[OPTIMIZE] Fix <code>Warning: client switching stacks?</code> in unit test when enable valgrind support.</li>
+<li>[FEATURE] Enable <code>-DLIBCOPP_FCONTEXT_USE_TSX=ON</code> for default.</li>
+</ol>
+<h3 id="break-changes-upgrade-guide-from-12x">BREAK CHANGES &amp; UPGRADE GUIDE FROM 1.2.X<a class="headerlink" href="#break-changes-upgrade-guide-from-12x" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rename <code>cotask::task::await</code> into <code>cotask::task::await_task</code></li>
+<li>Replace <code>cotask::task&lt;TCO_MACRO, TTASK_MACRO&gt;</code> with <code>cotask::task&lt;TCO_MACRO&gt;</code>, we don't allow to custom id allocator now.</li>
+<li>Replace <code>cotask::core::standard_int_id_allocator&lt;uint64_t&gt;</code> with <code>copp::util::uint64_id_allocator</code>, we don't allow to custom id allocator now.</li>
+<li>Require gcc 4.7+, MSVC 14+ (Visual Studio 2015)</li>
+<li>Require cmake 3.12.0 or upper</li>
+</ul>
+<h2 id="121-2019-10-04">1.2.1 (2019-10-04)<a class="headerlink" href="#121-2019-10-04" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] Add options to disable TLS usage for <em>this_task</em> and <em>this_coroutine</em> to reduce cache miss on single thread situation.</li>
+<li>[OPTIMIZE] Implement <strong>jump_to(...)</strong> as static inline to reduce code cache miss.</li>
+<li>[OPTIMIZE] Implement <strong>coroutine_context_callback(...)</strong> as static local symbol to reduce code cache miss.</li>
+</ol>
+<h2 id="120-2019-08-20">1.2.0 (2019-08-20)<a class="headerlink" href="#120-2019-08-20" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] Add more unit test.Increase coverage to 90%+.</li>
+<li>[OPTIMIZE] Rewrite toolchain detection scripts, support clang-cl now.</li>
+<li>[BOOST] merge boost.context 1.71.0.</li>
+<li>[FIX] Fix a coredump problem when task_ptr is reset when await_task other tasks.</li>
+<li>[OPTIMIZE] Optimize timer implement, task_manager support modify task timer now.</li>
+<li>[OPTIMIZE] A task can only be added to one task_manager now, and when finish task with task's API, task_manager will also be cleanup.</li>
+<li>[OPTIMIZE] Fix some warning when compiling with gcc 9+ and clang 8+.</li>
+<li>[OPTIMIZE] Use pthread  for TLS when both c++11 thead_local and pthread are available. It will reduce the minimal stack size.</li>
+<li>[OPTIMIZE] Fix and add some example codes and documents.</li>
+</ol>
+<h2 id="2018-12-07">2018-12-07<a class="headerlink" href="#2018-12-07" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] add adaptor for <a href="https://github.com/Microsoft/vcpkg">vcpkg</a></li>
+<li>[OPTIMIZE] using <a href="https://cmake.org/cmake/help/v3.13/module/GNUInstallDirs.html">GNUInstallDirs</a> for all directories</li>
+<li>[BOOST] merge boost.context 1.67.0</li>
+<li>[OPTIMIZE] add libcopp-config.cmake and libcopp-config-version.cmake for cmake module</li>
+<li>[OPTIMIZE] add <strong><em>then</em></strong> and <strong><em>await_task</em></strong> API for easier usage</li>
+<li>[OPTIMIZE] add <strong><em>/Zc:__cplusplus</em></strong> for MSVC to make __cplusplus to the standard value.</li>
+<li>[OPTIMIZE] fix a guess to x86_64 environment</li>
+<li>[OPTIMIZE] add more API for statistics</li>
+<li>[FIX] fix the problem that calling compare_exchange_weak failed will lead the cotask to exit</li>
+<li>[OPTIMIZE] merge the latest unit test framework, now we will support more readable output when test failed.</li>
+<li>[CI] We use xenial to build in linux now.</li>
+</ol>
+<h2 id="2018-01-01">2018-01-01<a class="headerlink" href="#2018-01-01" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[BOOST] merge boost.context 1.66.0</li>
+<li>[OPTIMIZE] add support for <a href="https://software.intel.com/en-us/node/695149">Intel Transactional Synchronisation Extensions (TSX)</a></li>
+<li>[OPTIMIZE] fix a warning reported by clang-analyzer.</li>
+<li>[CI] update README.md and automatic documents.(published at https://libcopp.atframe.work)</li>
+<li>[FIX] make sure all the allocated stacks are always greater than the configure value after reloaded when using stack pool.</li>
+<li>[FIX] allow segmented stacks when using clang and llvm.</li>
+<li>[OPTIMIZE] using the new script to run clang-analyzer.</li>
+<li>[OPTIMIZE] optimize the doxygen output and fix some markdown synax not supported by doxygen.</li>
+</ol>
+<h2 id="2017-10-01">2017-10-01<a class="headerlink" href="#2017-10-01" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] optimize cmake files for all target</li>
+<li>[OPTIMIZE] update samples and readme(fix sample for stack pool in README.md)</li>
+<li>[CI] add gcc 7</li>
+<li>[OPTIMIZE] using -std=c++17 for gcc/clang and /std:c++17 for MSVC 15(2015) and upper</li>
+</ol>
+<h2 id="2017-06-11">2017-06-11<a class="headerlink" href="#2017-06-11" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[OPTIMIZE] V2 framework and APIs completed, all reports in clang-analysis and cppcheck are fixed.</li>
+<li>[CI] benchmark and samples enabled in v2 branch</li>
+<li>[CI] add sample code in README.md into CI </li>
+</ol>
+<h2 id="2017-05-10">2017-05-10<a class="headerlink" href="#2017-05-10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[BOOST] merge boost.context 1.64.0</li>
+<li>[OPTIMIZE] add stack pool manager and unit test</li>
+<li>[OPTIMIZE] reduce memory fragment when allocate coroutine task and task action</li>
+<li>[CI] benchmark and sample will always be run in <a href="https://travis-ci.org/owt5008137/libcopp">Travis CI</a> and <a href="https://ci.appveyor.com/project/owt5008137/libcopp">Appveyor CI</a></li>
+</ol>
+<h2 id="2016-06-16">2016-06-16<a class="headerlink" href="#2016-06-16" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[BOOST] merge boost.context 1.61.0 and use the new jump progress(see https://owent.net/2016/1270.html for detail)</li>
+<li>[BOOST] enable valgrind support if valgrind/valgrind.h exists</li>
+<li>[CXX] use cmake to detect the function of compiler</li>
+<li>[OPTIMIZE] using pthread key when c++11 TLS not available</li>
+<li>[OPTIMIZE] remove coroutine_context_safe_base.coroutine_context_base is also thread safe now</li>
+<li>[OPTIMIZE] remove all global variables of cotask</li>
+<li>[OPTIMIZE] remove std/thread.hï¼Œ add noexpect if available</li>
+<li>[CI] CI use build matrix to test more compiler</li>
+<li>[BUILD] use RelWithDebInfo for default</li>
+</ol>
+<h2 id="2016-02-27">2016-02-27<a class="headerlink" href="#2016-02-27" title="Permanent link">&para;</a></h2>
+<ol>
+<li>v0.2.0, this version is used in our server for about one year.</li>
+</ol>
+<h2 id="2015-12-29">2015-12-29<a class="headerlink" href="#2015-12-29" title="Permanent link">&para;</a></h2>
+<ol>
+<li>add support for valgrind</li>
+<li>add ci configure</li>
+<li>merge boost.context 1.60.0</li>
+<li>add -fPIC, fix spin lock</li>
+<li>some environment do not support TLS, make these environment can compile success</li>
+</ol>
+<h2 id="2014-07-25">2014-07-25<a class="headerlink" href="#2014-07-25" title="Permanent link">&para;</a></h2>
+<p>v0.1.0</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/setup_lineno.js"></script>
+      
+    
+  </body>
+</html>

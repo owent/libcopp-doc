@@ -1,0 +1,1488 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://libcopp.atframe.work/">
+      
+      
+      
+        <link rel="next" href="examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>libcopp</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/highlight.css">
+    
+      <link rel="stylesheet" href="assets/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#libcopp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="libcopp" class="md-header__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="assets/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            libcopp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="libcopp" class="md-nav__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="assets/icon.png" alt="logo">
+
+    </a>
+    libcopp
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ci-job-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI Job Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-13x-14x-to-2x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UPGRADE FROM 1.3.X-1.4.X to 2.X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-12x-to-13x-14x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UPGRADE FROM 1.2.X to 1.3.X-1.4.X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INSTALL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INSTALL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-with-vcpkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install with vcpkg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmake-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="USAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using with cmake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directly-use-headers-and-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directly use headers and libraries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-start-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Start &amp; Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOTICE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BENCHMARK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FEEDBACK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONTRIBUTORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thanks-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        THANKS TO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benchmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="benchmarks/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="benchmarks/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ci-job-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI Job Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-13x-14x-to-2x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UPGRADE FROM 1.3.X-1.4.X to 2.X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-12x-to-13x-14x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UPGRADE FROM 1.2.X to 1.3.X-1.4.X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INSTALL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INSTALL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-with-vcpkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install with vcpkg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmake-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="USAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using with cmake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directly-use-headers-and-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directly use headers and libraries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-start-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Start &amp; Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOTICE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BENCHMARK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FEEDBACK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONTRIBUTORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thanks-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        THANKS TO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="libcopp">libcopp<a class="headerlink" href="#libcopp" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/owent/libcopp/releases"><img alt="Release" src="https://img.shields.io/github/v/release/owent/libcopp" /></a>
+<a href="https://github.com/owent/libcopp"><img alt="Code size" src="https://img.shields.io/github/languages/code-size/owent/libcopp" /></a>
+<a href="https://github.com/owent/libcopp"><img alt="Repo size" src="https://img.shields.io/github/repo-size/owent/libcopp" /></a>
+<a href="https://github.com/owent/libcopp/actions/workflows/main.yml"><img alt="CI build status" src="https://github.com/owent/libcopp/actions/workflows/main.yml/badge.svg" /></a>
+<a href="https://codecov.io/gh/owent/libcopp"><img alt="Coveralls coverage" src="https://codecov.io/gh/owent/libcopp/branch/v2/graph/badge.svg" /></a>
+<a href="https://github.com/owent/libcopp"><img alt="Forks" src="https://img.shields.io/github/forks/owent/libcopp?style=social" /></a>
+<a href="https://github.com/owent/libcopp"><img alt="Stars" src="https://img.shields.io/github/stars/owent/libcopp?style=social" /></a></p>
+<p>Cross-platform coroutine library in C++.</p>
+<h2 id="ci-job-matrix">CI Job Matrix<a class="headerlink" href="#ci-job-matrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Target System</th>
+<th>Toolchain</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux</td>
+<td>GCC</td>
+<td>Static linking</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>GCC</td>
+<td>Dynamic linking</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>GCC-latest</td>
+<td></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>GCC-latest</td>
+<td>No Exception</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>GCC-latest</td>
+<td>Thread Unsafe</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>Clang-latest</td>
+<td>With libc++</td>
+</tr>
+<tr>
+<td>MinGW64</td>
+<td>GCC</td>
+<td>Dynamic linking</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Visual Studio 2022</td>
+<td>Static linking</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Visual Studio 2022</td>
+<td>Dynamic linking</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>AppleClang</td>
+<td>With libc++</td>
+</tr>
+</tbody>
+</table>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>License under the <a href="https://github.com/owent/libcopp/blob/v2/LICENSE">MIT LICENSE</a>.</p>
+<h2 id="document">Document<a class="headerlink" href="#document" title="Permanent link">&para;</a></h2>
+<p>Documents can be found at <a href="https://libcopp.atframe.work">https://libcopp.atframe.work</a>, API references can be found at <a href="https://libcopp.atframe.work/doxygen/html/">https://libcopp.atframe.work/doxygen/html/</a>. (Generated by MkDocs with <a href="https://github.com/owent/libcopp/blob/v2/docs/mkdocs.yml">docs/mkdocs.yml</a> and Doxygen with <a href="https://github.com/owent/libcopp/blob/v2/docs/libcopp.doxyfile.in">docs/libcopp.doxyfile.in</a>.)</p>
+<h2 id="upgrade-from-13x-14x-to-2x">UPGRADE FROM 1.3.X-1.4.X to 2.X<a class="headerlink" href="#upgrade-from-13x-14x-to-2x" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add <code>using value_type = int;</code> into <code>T</code> when using <code>cotask::task&lt;T&gt;</code>.</li>
+<li>Rename <code>stack_allocator_t</code> to <code>stack_allocator_type</code> in <code>T</code> when using <code>cotask::task&lt;T&gt;</code>.</li>
+<li>Rename <code>coroutine_t</code> to <code>coroutine_type</code> in <code>T</code> when using <code>cotask::task&lt;T&gt;</code>.</li>
+<li>Rename <code>libcopp::util::*</code> to <code>copp::util::</code>.</li>
+<li>We are not allowed to use <code>libcopp::util::intrusive_ptr&lt;cotask::impl::task_impl&gt;</code> now, please use <code>cotask::task&lt;T&gt;::ptr_type</code> instead.</li>
+</ul>
+<h2 id="upgrade-from-12x-to-13x-14x">UPGRADE FROM 1.2.X to 1.3.X-1.4.X<a class="headerlink" href="#upgrade-from-12x-to-13x-14x" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Rename <code>cotask::task::await</code> into <code>cotask::task::await_task</code>.</li>
+<li>Replace <code>cotask::task&lt;TCO_MACRO, TTASK_MACRO&gt;</code> with <code>cotask::task&lt;TCO_MACRO&gt;</code>, we don't allow to custom id allocator now.</li>
+<li>Replace <code>cotask::core::standard_int_id_allocator&lt;uint64_t&gt;</code> with <code>copp::util::uint64_id_allocator</code>, we don't allow to custom id allocator now.</li>
+<li>Require gcc 4.8+, MSVC 15+(Visual Studio 2017&gt;).</li>
+<li>Require <a href="https://cmake.org/">cmake</a> 3.12.0 or upper.</li>
+</ul>
+<h2 id="install">INSTALL<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>libcopp use <a href="https://cmake.org/">cmake</a> to generate makefile and switch build tools.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>[required]</strong> GCC or Clang or MSVC or clang-cl support ISO C++ 11 and upper</li>
+<li><strong>[required]</strong> <a href="https://cmake.org/">cmake</a> 3.16.0 and upper</li>
+<li><strong>[optional]</strong> <a href="https://github.com/google/googletest">gtest</a> 1.6.0 and upper (Better unit test supported)</li>
+<li><strong>[optional]</strong> <a href="http://www.boost.org/doc/libs/release/libs/test">Boost.Test</a> (Boost.Test supported)</li>
+</ul>
+<h4 id="unix">Unix<a class="headerlink" href="#unix" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>[required]</strong> <code>ar, as, ld</code> (<a href="http://www.gnu.org/software/binutils/">binutils</a>) or <a href="http://llvm.org/">llvm</a></li>
+<li><strong>[optional]</strong> if using <a href="https://github.com/google/googletest">gtest</a>, pthread is required.</li>
+</ul>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>[required]</strong> masm (in MSVC)</li>
+<li><strong>[optional]</strong> if using <a href="https://github.com/google/googletest">gtest</a>, pthread is required.</li>
+</ul>
+<h3 id="install-with-vcpkg">Install with vcpkg<a class="headerlink" href="#install-with-vcpkg" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clone and setup <a href="https://github.com/Microsoft/vcpkg">vcpkg</a> (See more detail on <a href="https://github.com/Microsoft/vcpkg">https://github.com/Microsoft/vcpkg</a>)</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Microsoft/vcpkg.git
+<span class="nb">cd</span><span class="w"> </span>vcpkg
+PS&gt;<span class="w"> </span>bootstrap-vcpkg.bootstrap
+Linux:~/$<span class="w"> </span>./bootstrap-vcpkg.sh
+</code></pre></div>
+<ol>
+<li>Install libcopp</li>
+</ol>
+<div class="highlight"><pre><span></span><code>PS&gt;<span class="w"> </span>.<span class="se">\v</span>cpkg<span class="w"> </span>install<span class="w"> </span>libcopp<span class="w"> </span><span class="o">[</span>--triplet<span class="w"> </span>x64-windows-static/x64-windows/x64-windows-static-md<span class="w"> </span>and<span class="w"> </span>etc...<span class="o">]</span>
+Linux:~/$<span class="w"> </span>./vcpkg<span class="w"> </span>install<span class="w"> </span>libcopp
+</code></pre></div>
+<ol>
+<li>See <a href="#using-with-cmake">using with cmake</a> for cmake below.</li>
+</ol>
+<h3 id="custom-build">Custom Build<a class="headerlink" href="#custom-build" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clone and make a build directory</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--single-branch<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>https://github.com/owent/libcopp.git
+mkdir<span class="w"> </span>libcopp/build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>libcopp/build
+</code></pre></div>
+<ol>
+<li>Run cmake command</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># cmake &lt;libcopp dir&gt; [options...]</span>
+cmake<span class="w"> </span>..<span class="w"> </span>-DPROJECT_ENABLE_UNITTEST<span class="o">=</span>YES<span class="w"> </span>-DPROJECT_ENABLE_SAMPLE<span class="o">=</span>YES
+</code></pre></div>
+<ol>
+<li>Make libcopp</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>RelWithDebInfo<span class="w"> </span><span class="c1"># or make [options] when using Makefile</span>
+</code></pre></div>
+<ol>
+<li>Run <code>test/sample/benchmark</code> <em>[optional]</em></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run test =&gt; Required: PROJECT_ENABLE_UNITTEST=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.unit_test
+<span class="c1"># Run sample =&gt; Required: PROJECT_ENABLE_SAMPLE=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.sample
+<span class="c1"># Run benchmark =&gt; Required: PROJECT_ENABLE_SAMPLE=YES</span>
+ctest<span class="w"> </span>-VV<span class="w"> </span>.<span class="w"> </span>-C<span class="w"> </span>RelWithDebInfo<span class="w"> </span>-L<span class="w"> </span>libcopp.benchmark
+</code></pre></div>
+<ol>
+<li>Install <em>[optional]</em></li>
+</ol>
+<div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>RelWithDebInfo<span class="w"> </span>--target<span class="w"> </span>install<span class="w"> </span><span class="c1"># or make install when using Makefile</span>
+</code></pre></div>
+<ol>
+<li>Then just include and link <code>libcopp.*/libcotask.*</code>, or see <a href="#using-with-cmake">using with cmake</a> for cmake below.</li>
+</ol>
+<h2 id="cmake-options">CMake Options<a class="headerlink" href="#cmake-options" title="Permanent link">&para;</a></h2>
+<p>Options can be cmake options. such as set compile toolchains, source directory or options of libcopp that control build actions. libcopp options are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BUILD_SHARED_LIBS=YES|NO</td>
+<td>[default=NO] Build dynamic library.</td>
+</tr>
+<tr>
+<td>LIBCOPP_ENABLE_SEGMENTED_STACKS=YES|NO</td>
+<td>[default=NO] Enable split stack supported context.(it's only availabe in linux and gcc 4.7.0 or upper)</td>
+</tr>
+<tr>
+<td>LIBCOPP_ENABLE_VALGRIND=YES|NO</td>
+<td>[default=YES] Enable valgrind supported context.</td>
+</tr>
+<tr>
+<td>PROJECT_ENABLE_UNITTEST=YES|NO</td>
+<td>[default=NO] Build unit test.</td>
+</tr>
+<tr>
+<td>PROJECT_ENABLE_SAMPLE=YES|NO</td>
+<td>[default=NO] Build samples.</td>
+</tr>
+<tr>
+<td>LIBCOPP_ENABLE_MULTI_THREAD=YES|NO</td>
+<td>[default=YES] Enable multi-thread support.</td>
+</tr>
+<tr>
+<td>LIBCOTASK_ENABLE=YES|NO</td>
+<td>[default=YES] Enable build libcotask.</td>
+</tr>
+<tr>
+<td>LIBCOPP_FCONTEXT_USE_TSX=YES|NO</td>
+<td>[default=YES] Enable <a href="https://software.intel.com/en-us/node/695149">Intel Transactional Synchronisation Extensions (TSX)</a>.</td>
+</tr>
+<tr>
+<td>LIBCOPP_MACRO_TLS_STACK_PROTECTOR=YES|NO</td>
+<td>[default=NO] Users need set LIBCOPP_MACRO_TLS_STACK_PROTECTOR=ON when compiling with <code>-fstack-protector</code>. Because it changes the default context switching logic.</td>
+</tr>
+<tr>
+<td>GTEST_ROOT=[path]</td>
+<td>set gtest library install prefix path</td>
+</tr>
+<tr>
+<td>BOOST_ROOT=[path]</td>
+<td>set Boost.Test library install prefix path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">USAGE<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="using-with-cmake">Using with cmake<a class="headerlink" href="#using-with-cmake" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Using <code>set(Libcopp_ROOT &lt;where to find libcopp/INSTALL_PREFIX&gt;)</code></li>
+<li>Just using <a href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package(Libcopp)</a> to use libcopp module.</li>
+<li>Example:(we assume the target name is stored in <code>${CUSTOM_TARGET_NAME}</code>)</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">find_package</span><span class="p">(</span><span class="s">Libcopp</span><span class="w"> </span><span class="s">CONFIG</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="o">${</span><span class="nv">CUSTOM_TARGET_NAME</span><span class="o">}</span><span class="w"> </span><span class="s">libcopp::cotask</span><span class="p">)</span>
+<span class="c"># Or just using copp by target_link_libraries(${CUSTOM_TARGET_NAME} libcopp::copp)</span>
+</code></pre></div>
+<p>If using MSVC and vcpkg, CRT must match the triplet of vcpkg, these codes below may be helpful:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">MSVC</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">VCPKG_TOOLCHAIN</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">if</span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">ENV{VCPKG_DEFAULT_TRIPLET}</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="s">DEFINED</span><span class="w"> </span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="w"> </span><span class="s2">&quot;$ENV{VCPKG_DEFAULT_TRIPLET}&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endif</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">VCPKG_TARGET_TRIPLET</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;^.*windows-static$&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_MSVC_RUNTIME_LIBRARY</span><span class="w"> </span><span class="s2">&quot;MultiThreaded$&lt;$&lt;CONFIG:Debug&gt;:Debug&gt;&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">else</span><span class="w"> </span><span class="p">()</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_MSVC_RUNTIME_LIBRARY</span><span class="w"> </span><span class="s2">&quot;MultiThreaded$&lt;$&lt;CONFIG:Debug&gt;:Debug&gt;DLL&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+<span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+</code></pre></div>
+<p>See more detail on <a href="https://github.com/Microsoft/vcpkg/tree/master/ports/libcopp">https://github.com/Microsoft/vcpkg/tree/master/ports/libcopp</a>.</p>
+<h3 id="directly-use-headers-and-libraries">Directly use headers and libraries<a class="headerlink" href="#directly-use-headers-and-libraries" title="Permanent link">&para;</a></h3>
+<p>Just include headers and linking library file of your platform to use libcopp.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">LIBCOPP_PREFIX</span><span class="o">=</span>&lt;WHERE<span class="w"> </span>TO<span class="w"> </span>INSTALL<span class="w"> </span>libcopp&gt;
+
+<span class="c1"># Example command for build sample with gcc 4.9 or upper on Linux</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>sample_readme_*.cpp<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>g++<span class="w"> </span>-std<span class="o">=</span>c++14<span class="w"> </span>-O2<span class="w"> </span>-g<span class="w"> </span>-ggdb<span class="w"> </span>-Wall<span class="w"> </span>-Werror<span class="w"> </span>-fPIC<span class="w"> </span>-rdynamic<span class="w"> </span>-fdiagnostics-color<span class="o">=</span>auto<span class="w"> </span>-Wno-unused-local-typedefs<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span>-L<span class="nv">$LIBCOPP_PREFIX</span>/lib64<span class="w"> </span>-lcopp<span class="w"> </span>-lcotask<span class="w"> </span><span class="nv">$source</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$source</span>.exe<span class="p">;</span>
+<span class="k">done</span>
+
+<span class="c1"># Example command for build sample with clang 3.9 or upper and libc++ on Linux</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>sample_readme_*.cpp<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>clang++<span class="w"> </span>-std<span class="o">=</span>c++17<span class="w"> </span>-stdlib<span class="o">=</span>libc++<span class="w"> </span>-O2<span class="w"> </span>-g<span class="w"> </span>-ggdb<span class="w"> </span>-Wall<span class="w"> </span>-Werror<span class="w"> </span>-fPIC<span class="w"> </span>-rdynamic<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span>-L<span class="nv">$LIBCOPP_PREFIX</span>/lib64<span class="w"> </span>-lcopp<span class="w"> </span>-lcotask<span class="w"> </span>-lc++<span class="w"> </span>-lc++abi<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="nv">$source</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$source</span>.exe<span class="p">;</span>
+<span class="k">done</span>
+
+<span class="c1"># AppleClang on macOS just like those scripts upper.</span>
+<span class="c1"># If you are using MinGW on Windows, it&#39;s better to add -static-libstdc++ -static-libgcc to </span>
+<span class="c1">#     use static linking and other scripts are just like those on Linux.</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example command for build sample with MSVC 1914 or upper on Windows &amp; powershell(Debug Mode /MDd)</span>
+foreach<span class="w"> </span><span class="o">(</span><span class="nv">$source</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>Get-ChildItem<span class="w"> </span>-File<span class="w"> </span>-Name<span class="w"> </span>.<span class="se">\s</span>ample_readme_*.cpp<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>cl<span class="w"> </span>/nologo<span class="w"> </span>/MP<span class="w"> </span>/W4<span class="w"> </span>/wd<span class="s2">&quot;4100&quot;</span><span class="w"> </span>/wd<span class="s2">&quot;4125&quot;</span><span class="w"> </span>/EHsc<span class="w"> </span>/std:c++17<span class="w"> </span>/Zc:__cplusplus<span class="w"> </span>/O2<span class="w"> </span>/MDd<span class="w"> </span>/I<span class="nv">$LIBCOPP_PREFIX</span>/include<span class="w"> </span><span class="nv">$LIBCOPP_PREFIX</span>/lib64/copp.lib<span class="w"> </span><span class="nv">$LIBCOPP_PREFIX</span>/lib64/cotask.lib<span class="w"> </span><span class="nv">$source</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="get-start-example">Get Start &amp; Example<a class="headerlink" href="#get-start-example" title="Permanent link">&para;</a></h2>
+<p>There serveral samples to use <code>copp::coroutine_context</code>, <code>copp::coroutine_context_fiber</code> and <code>cotask::task</code>:</p>
+<ol>
+<li>Using coroutine context</li>
+<li>Using coroutine task</li>
+<li>Using coroutine task manager</li>
+<li>Using stack pool</li>
+<li>Using <code>task::then</code> or <code>task::await_task</code></li>
+<li>Using <code>copp::callable_promise</code> of c++20 coroutine</li>
+<li>Using <code>copp::generator_future</code> for c++20 coroutine</li>
+<li>Custom error (timeout for example) when using c++20 coroutine</li>
+<li>Let c++20 coroutine work with <code>cotask::task</code></li>
+<li>Using Windows fiber and <code>SetUnhandledExceptionFilter</code> on Windows with <code>cotask::task</code></li>
+<li>Using c++20 coroutine with channel receiver and sender</li>
+<li>Using stackful coroutine task with channel receiver and sender</li>
+<li>Using stackful coroutine with channel receiver and sender</li>
+<li>Using c++20 coroutine with channel receiver and sender</li>
+</ol>
+<p>All sample codes can be found on <a href="https://libcopp.atframe.work/examples/">EXAMPLES</a> and <a href="https://github.com/owent/libcopp/tree/v2/sample">sample</a>.</p>
+<h2 id="notice">NOTICE<a class="headerlink" href="#notice" title="Permanent link">&para;</a></h2>
+<p>Split stack support: if in Linux and user gcc 4.7.0 or upper, add <code>-DLIBCOPP_ENABLE_SEGMENTED_STACKS=YES</code> to use split stack supported context.</p>
+<p>It's recommanded to use stack pool instead of gcc splited stack.</p>
+<h2 id="benchmark">BENCHMARK<a class="headerlink" href="#benchmark" title="Permanent link">&para;</a></h2>
+<p>Please see CI output for latest benchmark report. Click to visit <a href="https://github.com/owent/libcopp/actions">Github Actions</a>.</p>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p>Q: How to enable c++20 coroutine</p>
+<p>ANS: Add <code>/std:c++latest /await</code> for MSVC 1932 and below or <code>-std=c++20 -fcoroutines-ts -stdlib=libc++</code> for clang 13 and below or <code>-std=c++20 -fcoroutines</code> for gcc 10.</p>
+<p>If you can just use <code>-std=c++20 -stdlib=libc++</code> clang 14 or above, <code>-astd=c++20</code> for gcc 11 or above, and <code>/std:c++latest</code> for MSVC 1932 or above.</p>
+<p>Q: Will libcopp handle exception?</p>
+<p>ANS: When using c++11 or above, libcopp will catch all unhandled exception and rethrow it after coroutine resumed.</p>
+<p>Q: Why <code>SetUnhandledExceptionFilter</code> can not catch the unhandled exception in a coroutine?</p>
+<p>ANS: <code>SetUnhandledExceptionFilter</code> only works with <strong>Windows Fiber</strong>, please see <a href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_11.cpp">sample/sample_readme_11.cpp</a> for details.</p>
+<h2 id="feedback">FEEDBACK<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
+<p>If you has any question, please create a issue and provide the information of your environments. For example:</p>
+<ul>
+<li><strong>OS</strong>: Windows 10 Pro 19041 <em>(This can be see after running <code>msinfo32</code>)</em> / Manjaro(Arch) Linux Linux 5.4.39-1-MANJARO</li>
+<li><strong>Compiler</strong>: Visual Studio 2022 C++ 17.14.6 with VS 2022 C++ v14.38 or MSVC 1925/ gcc 9.3.0</li>
+<li><strong>CMake Commands</strong>: <code>cmake .. -G "Visual Studio 17 2022" -A x64 -DLIBCOPP_FCONTEXT_USE_TSX=ON -DPROJECT_ENABLE_UNITTEST=ON -DPROJECT_ENABLE_SAMPLE=ON-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=%cd%/install-prefix</code> / <code>cmake .. -G Ninja -DLIBCOPP_FCONTEXT_USE_TSX=ON -DPROJECT_ENABLE_UNITTEST=ON -DPROJECT_ENABLE_SAMPLE=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/opt/libcopp</code></li>
+<li><strong>Compile Commands</strong>: <code>cmake --build . -j</code></li>
+<li><strong>Related Environment Variables</strong>: Please provide all the environment variables which will change the cmake toolchain, <code>CC</code>, <code>CXX</code>, <code>AR</code> and etc.</li>
+</ul>
+<h2 id="contributors">CONTRIBUTORS<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/owent">owent</a></li>
+</ul>
+<h2 id="thanks-to">THANKS TO<a class="headerlink" href="#thanks-to" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/mutouyun">mutouyun</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="assets/setup_lineno.js"></script>
+      
+    
+  </body>
+</html>

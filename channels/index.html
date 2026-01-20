@@ -1,0 +1,1852 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://libcopp.atframe.work/channels/">
+      
+      
+        <link rel="prev" href="../examples/">
+      
+      
+        <link rel="next" href="../reference/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Channels - libcopp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/highlight.css">
+    
+      <link rel="stylesheet" href="../assets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#channelreceiver-pattern" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="libcopp" class="md-header__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="../assets/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            libcopp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Channels
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="libcopp" class="md-nav__button md-logo" aria-label="libcopp" data-md-component="logo">
+      
+  <img src="../assets/icon.png" alt="logo">
+
+    </a>
+    libcopp
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/owent/libcopp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    owent/libcopp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stackful-coroutine-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stackful Coroutine Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stackful Coroutine Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackful_channel_receivert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stackful_channel_receiver&lt;T&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackful_channel_sendert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stackful_channel_sender&lt;T&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20-coroutine-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++20 Coroutine Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++20 Coroutine Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-channel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_channel_receivert-errortransform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_channel_receiver&lt;T, ErrorTransform&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_channel_sendert-errortransform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_channel_sender&lt;T, ErrorTransform&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-error-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Error Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producerconsumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producer/Consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-only-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal-only Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-vtable-types-c20-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator VTable Types (C++20 Only)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generator VTable Types (C++20 Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typekdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kDefault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typeklightweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kLightWeight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typeknone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kNone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-stackful-vs-stackless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Stackful vs Stackless
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Pitfalls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Pitfalls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forgetting-to-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forgetting to Reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sender-access-pattern-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sender Access Pattern Difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-handling-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not Handling Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benchmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarks/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stackful-coroutine-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stackful Coroutine Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stackful Coroutine Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackful_channel_receivert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stackful_channel_receiver&lt;T&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackful_channel_sendert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stackful_channel_sender&lt;T&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20-coroutine-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++20 Coroutine Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++20 Coroutine Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-channel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_channel_receivert-errortransform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_channel_receiver&lt;T, ErrorTransform&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_channel_sendert-errortransform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_channel_sender&lt;T, ErrorTransform&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-error-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Error Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producerconsumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producer/Consumer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-only-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal-only Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-vtable-types-c20-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator VTable Types (C++20 Only)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generator VTable Types (C++20 Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typekdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kDefault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typeklightweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kLightWeight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_vtable_typeknone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        generator_vtable_type::kNone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-stackful-vs-stackless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Stackful vs Stackless
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Pitfalls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Pitfalls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forgetting-to-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forgetting to Reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sender-access-pattern-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sender Access Pattern Difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-handling-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not Handling Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="channelreceiver-pattern">Channel/Receiver Pattern<a class="headerlink" href="#channelreceiver-pattern" title="Permanent link">&para;</a></h1>
+<p>Channels provide a powerful communication mechanism between coroutines in libcopp. They enable producer-consumer patterns and synchronization between both stackful and stackless (C++20) coroutines.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The channel/receiver pattern in libcopp allows coroutines to send and receive values asynchronously:</p>
+<ul>
+<li><strong>Sender</strong>: Produces values and sends them through a channel</li>
+<li><strong>Receiver</strong>: Waits for and receives values from a channel</li>
+<li><strong>Channel</strong>: The communication medium connecting senders and receivers</li>
+</ul>
+<p>Channels support:</p>
+<ul>
+<li>✅ <strong>Producer/Consumer patterns</strong>: One-to-one communication</li>
+<li>✅ <strong>Value transmission</strong>: Send any copyable/movable type</li>
+<li>✅ <strong>Void channels</strong>: Signal-only communication (no value)</li>
+<li>✅ <strong>Error handling</strong>: Custom error transformations</li>
+<li>✅ <strong>Both coroutine types</strong>: Stackful and stackless coroutines</li>
+</ul>
+<p><strong>Note</strong>: Channels do NOT support true broadcasting/multicasting. While multiple coroutines can wait on the same receiver, they share the underlying context. When one receiver calls <code>reset_value()</code>, it affects all receivers sharing that context.</p>
+<hr />
+<h2 id="stackful-coroutine-channels">Stackful Coroutine Channels<a class="headerlink" href="#stackful-coroutine-channels" title="Permanent link">&para;</a></h2>
+<p>Stackful channels work with <code>cotask::task</code> and <code>copp::coroutine_context</code>.</p>
+<h3 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h3>
+<h4 id="creating-a-channel">Creating a Channel<a class="headerlink" href="#creating-a-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/stackful_channel.h&gt;</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_stackful_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>Returns</strong>: A pair of <code>stackful_channel_receiver&lt;T&gt;</code> and <code>stackful_channel_sender&lt;T&gt;</code></p>
+<h4 id="stackful_channel_receivert"><code>stackful_channel_receiver&lt;T&gt;</code><a class="headerlink" href="#stackful_channel_receivert" title="Permanent link">&para;</a></h4>
+<p>The receiver waits for values from the channel.</p>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li><code>void reset_value()</code>: Reset the receiver to receive the next value</li>
+<li><code>bool is_ready() const</code>: Check if a value is ready</li>
+<li><code>bool is_pending() const</code>: Check if waiting for a value</li>
+</ul>
+<p><strong>Usage with <code>cotask::task::await_value()</code></strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">consumer_action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">task_action_impl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_receiver</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">receiver_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Wait for and receive a value</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;::</span><span class="n">this_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">await_value</span><span class="p">(</span><span class="n">receiver_</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Reset for next value</span>
+<span class="w">    </span><span class="n">receiver_</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><strong>With error transform</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">error_transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="n">copp</span><span class="o">::</span><span class="n">copp_error_code</span><span class="w"> </span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span><span class="c1">// Default value on error</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;::</span><span class="n">this_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">await_value</span><span class="p">(</span><span class="n">receiver_</span><span class="p">,</span><span class="w"> </span><span class="n">error_transform</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Usage with <code>inject_await()</code> for low-level control</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">consumer_runner</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data_ptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">receiver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_receiver</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;*&gt;</span><span class="p">(</span><span class="n">data_ptr</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Get current coroutine context</span>
+<span class="w">  </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">this_coroutine</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">copp</span><span class="o">::</span><span class="n">coroutine_context</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Directly await on receiver</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">error_transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="n">copp</span><span class="o">::</span><span class="n">copp_error_code</span><span class="w"> </span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">receiver</span><span class="o">-&gt;</span><span class="n">inject_await</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">error_transform</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">receiver</span><span class="o">-&gt;</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="stackful_channel_sendert"><code>stackful_channel_sender&lt;T&gt;</code><a class="headerlink" href="#stackful_channel_sendert" title="Permanent link">&para;</a></h4>
+<p>The sender sends values through the channel.</p>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li><code>void set_value(T&amp;&amp; value)</code>: Send a value through the channel</li>
+<li><code>void set_value(const T&amp; value)</code>: Send a value through the channel</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span>
+
+<span class="c1">// Send a value</span>
+<span class="n">sender</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+
+<span class="c1">// All waiting receivers will be resumed</span>
+</code></pre></div>
+<h3 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/stackful_channel.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcotask/task.h&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">producer_action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">task_action_impl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">sender_</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">consumer_action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">task_action_impl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_receiver</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">receiver_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;::</span><span class="n">this_task</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">await_value</span><span class="p">(</span><span class="n">receiver_</span><span class="p">);</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Received: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">      </span><span class="n">receiver_</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_stackful_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">consumer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;::</span><span class="n">create</span><span class="p">(</span><span class="n">consumer_action</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">receiver</span><span class="p">)));</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">producer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cotask</span><span class="o">::</span><span class="n">task</span><span class="o">&lt;&gt;::</span><span class="n">create</span><span class="p">(</span><span class="n">producer_action</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">sender</span><span class="p">)));</span>
+
+<span class="w">  </span><span class="n">consumer</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+<span class="w">  </span><span class="n">producer</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>See</strong>: <a href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_13.cpp">sample/sample_readme_13.cpp</a> for full examples including:
+- Basic producer/consumer
+- Error handling with custom transforms
+- Direct usage with <code>copp::coroutine_context</code></p>
+<hr />
+<h2 id="c20-coroutine-channels">C++20 Coroutine Channels<a class="headerlink" href="#c20-coroutine-channels" title="Permanent link">&para;</a></h2>
+<p>Stackless channels work with C++20 coroutines (<code>copp::callable_future</code>, <code>copp::generator_future</code>).</p>
+<h3 id="api-reference_1">API Reference<a class="headerlink" href="#api-reference_1" title="Permanent link">&para;</a></h3>
+<h4 id="creating-a-channel_1">Creating a Channel<a class="headerlink" href="#creating-a-channel_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/generator_promise.h&gt;</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>Returns</strong>: A pair of <code>generator_channel_receiver&lt;T&gt;</code> and <code>generator_channel_sender&lt;T&gt;</code></p>
+<p><strong>Types</strong>:
+- <code>generator_channel_receiver&lt;T, ErrorTransform&gt;</code>: Alias for <code>generator_channel_future&lt;T, ErrorTransform&gt;</code>
+- <code>generator_channel_sender&lt;T, ErrorTransform&gt;</code>: A smart pointer (<code>context_pointer_type</code>) to the channel context</p>
+<h4 id="generator_channel_receivert-errortransform"><code>generator_channel_receiver&lt;T, ErrorTransform&gt;</code><a class="headerlink" href="#generator_channel_receivert-errortransform" title="Permanent link">&para;</a></h4>
+<p>The receiver is an awaitable that suspends the coroutine until a value is available.</p>
+<p><strong>Template Parameters</strong>:
+- <code>T</code>: Value type (use <code>void</code> for signal-only channels)
+- <code>ErrorTransform</code>: Error transform functor (default: <code>promise_error_transform&lt;T&gt;</code>)</p>
+<p><strong>Methods</strong>:
+- <code>void reset_value()</code>: Reset the receiver to receive the next value
+- <code>bool is_ready() const</code>: Check if a value is ready
+- <code>bool is_pending() const</code>: Check if waiting for a value
+- <code>promise_status get_status() const</code>: Get current status</p>
+<p><strong>Usage with <code>co_await</code></strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">consumer</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_receiver</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">receiver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Suspend until value is available</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Received: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Reset for next value</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>For <code>void</code> channels</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">consumer</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_receiver</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">receiver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Wait for signal</span>
+<span class="w">  </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Signal received!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="generator_channel_sendert-errortransform"><code>generator_channel_sender&lt;T, ErrorTransform&gt;</code><a class="headerlink" href="#generator_channel_sendert-errortransform" title="Permanent link">&para;</a></h4>
+<p>The sender is a smart pointer to the channel context.</p>
+<p><strong>Methods</strong>:
+- <code>void set_value(T&amp;&amp; value)</code>: Send a value (for non-void channels)
+- <code>void set_value(const T&amp; value)</code>: Send a value (for non-void channels)
+- <code>void set_value()</code>: Send a signal (for void channels)</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span>
+
+<span class="c1">// Send a value</span>
+<span class="n">sender</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w">  </span><span class="c1">// Note: use -&gt; operator</span>
+
+<span class="c1">// All waiting coroutines will be resumed</span>
+</code></pre></div>
+<h4 id="custom-error-transform">Custom Error Transform<a class="headerlink" href="#custom-error-transform" title="Permanent link">&para;</a></h4>
+<p>Define custom error handling for channel operations:</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">custom_error_transform</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="w"> </span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="o">::</span><span class="n">kKilled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-999</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="o">::</span><span class="n">kTimeout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">-888</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">custom_error_transform</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">consumer_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consumer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">receiver</span><span class="p">));</span>
+
+<span class="c1">// Kill the consumer to trigger error transform</span>
+<span class="n">consumer_future</span><span class="p">.</span><span class="n">kill</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">promise_status</span><span class="o">::</span><span class="n">kKilled</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="c1">// consumer_future.get_internal_promise().data() == -999</span>
+</code></pre></div>
+<h3 id="complete-example_1">Complete Example<a class="headerlink" href="#complete-example_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/callable_promise.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;libcopp/coroutine/generator_promise.h&gt;</span>
+
+<span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">producer</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sender</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;::</span><span class="n">yield</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">co_return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">copp</span><span class="o">::</span><span class="n">callable_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">consumer</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_receiver</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="n">receiver</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">co_return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">consumer_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consumer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">receiver</span><span class="p">),</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">producer_future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">producer</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consumer_future</span><span class="p">.</span><span class="n">get_internal_promise</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// total == 1500 (100 + 200 + 300 + 400 + 500)</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>See</strong>: <a href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_14.cpp">sample/sample_readme_14.cpp</a> for full examples including:
+- Basic channel usage
+- Producer/consumer pattern
+- Error handling with custom transforms
+- Void channels for signaling
+- Comparison of generator vtable types</p>
+<hr />
+<h2 id="usage-patterns">Usage Patterns<a class="headerlink" href="#usage-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="producerconsumer">Producer/Consumer<a class="headerlink" href="#producerconsumer" title="Permanent link">&para;</a></h3>
+<p>One producer sends values, one consumer receives them.</p>
+<p><strong>Best for</strong>: Pipeline processing, task queues</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Stackful</span>
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_stackful_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// C++20</span>
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="signal-only-communication">Signal-only Communication<a class="headerlink" href="#signal-only-communication" title="Permanent link">&para;</a></h3>
+<p>Use <code>void</code> channels when you only need to signal events without data.</p>
+<p><strong>Best for</strong>: Synchronization, wake-up notifications</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// Sender</span>
+<span class="n">sender</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">();</span><span class="w">  </span><span class="c1">// Send signal</span>
+
+<span class="c1">// Receiver</span>
+<span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span><span class="w">  </span><span class="c1">// Wait for signal</span>
+</code></pre></div>
+<hr />
+<h2 id="generator-vtable-types-c20-only">Generator VTable Types (C++20 Only)<a class="headerlink" href="#generator-vtable-types-c20-only" title="Permanent link">&para;</a></h2>
+<p>libcopp provides three generator vtable types for different performance/flexibility tradeoffs:</p>
+<h3 id="generator_vtable_typekdefault"><code>generator_vtable_type::kDefault</code><a class="headerlink" href="#generator_vtable_typekdefault" title="Permanent link">&para;</a></h3>
+<p><strong>Type</strong>: <code>copp::generator_future&lt;T&gt;</code></p>
+<ul>
+<li>Uses <code>std::function</code> for callbacks</li>
+<li>Most flexible - can capture complex state</li>
+<li>Higher overhead due to type erasure</li>
+<li><strong>Best for</strong>: Complex scenarios with stateful callbacks</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="n">captured_state</span><span class="p">](</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">context_pointer_type</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Can capture complex state</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">generator_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">context_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Resume callback</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="generator_vtable_typeklightweight"><code>generator_vtable_type::kLightWeight</code><a class="headerlink" href="#generator_vtable_typeklightweight" title="Permanent link">&para;</a></h3>
+<p><strong>Type</strong>: <code>copp::generator_lightweight_future&lt;T&gt;</code></p>
+<ul>
+<li>Uses function pointers instead of <code>std::function</code></li>
+<li>Lower overhead, faster performance</li>
+<li>Cannot capture state in callbacks</li>
+<li><strong>Best for</strong>: Performance-critical code with simple callbacks</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">on_suspend</span><span class="p">(</span><span class="n">copp</span><span class="o">::</span><span class="n">generator_lightweight_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">context_pointer_type</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Function pointer - no captures</span>
+<span class="p">}</span>
+
+<span class="n">copp</span><span class="o">::</span><span class="n">generator_lightweight_future</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span><span class="p">{</span><span class="n">on_suspend</span><span class="p">};</span>
+</code></pre></div>
+<h3 id="generator_vtable_typeknone"><code>generator_vtable_type::kNone</code><a class="headerlink" href="#generator_vtable_typeknone" title="Permanent link">&para;</a></h3>
+<p><strong>Type</strong>: <code>copp::generator_channel_future&lt;T&gt;</code> (used by <code>make_channel()</code>)</p>
+<ul>
+<li>No callbacks - designed for channel pattern</li>
+<li>Minimal overhead, most efficient</li>
+<li><strong>Best for</strong>: Channel-based communication</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="c1">// receiver is generator_channel_future&lt;int&gt;</span>
+</code></pre></div>
+<h3 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Recommended Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel communication</td>
+<td><code>make_channel()</code> (kNone)</td>
+</tr>
+<tr>
+<td>Simple futures</td>
+<td><code>generator_lightweight_future</code> (kLightWeight)</td>
+</tr>
+<tr>
+<td>Complex futures with state</td>
+<td><code>generator_future</code> (kDefault)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="when-to-use-stackful-vs-stackless">When to Use Stackful vs Stackless<a class="headerlink" href="#when-to-use-stackful-vs-stackless" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Stackful Channels</th>
+<th>Stackless Channels (C++20)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stack usage</strong></td>
+<td>Allocates stack per coroutine</td>
+<td>No stack allocation</td>
+</tr>
+<tr>
+<td><strong>Compatibility</strong></td>
+<td>Works on all C++11+ compilers</td>
+<td>Requires C++20 support</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>Works with existing callback APIs</td>
+<td>Better with async/await code</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Slightly higher overhead</td>
+<td>Lower overhead</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Easier to debug stack traces</td>
+<td>Harder to debug state machines</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation</strong>:
+- Use <strong>stackful</strong> if you need C++11/14/17 compatibility or work with callback-heavy code
+- Use <strong>stackless</strong> if you have C++20 and want modern async/await syntax</p>
+<h3 id="channel-best-practices">Channel Best Practices<a class="headerlink" href="#channel-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Always <code>reset_value()</code> after receiving</strong>
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+<span class="n">receiver</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span><span class="w">  </span><span class="c1">// Required for next receive</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Avoid blocking senders</strong></p>
+</li>
+<li>Channels don't buffer values</li>
+<li>Sender resumes all waiting receivers immediately</li>
+<li>
+<p>If no receivers are waiting, the value is stored until next <code>co_await</code></p>
+</li>
+<li>
+<p><strong>Error handling</strong></p>
+</li>
+<li>Always provide error transforms for production code</li>
+<li>Handle <code>promise_status::kKilled</code> and <code>kTimeout</code> cases</li>
+<li>Default error transform returns default-constructed value</li>
+</ol>
+<hr />
+<h2 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
+<h3 id="forgetting-to-reset">Forgetting to Reset<a class="headerlink" href="#forgetting-to-reset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ Wrong</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span><span class="w">  </span><span class="c1">// Returns same value!</span>
+
+<span class="c1">// ✅ Correct</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+<span class="n">receiver</span><span class="p">.</span><span class="n">reset_value</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="sender-access-pattern-difference">Sender Access Pattern Difference<a class="headerlink" href="#sender-access-pattern-difference" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Stackful</span>
+<span class="n">copp</span><span class="o">::</span><span class="n">stackful_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender</span><span class="p">;</span>
+<span class="n">sender</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w">  </span><span class="c1">// Direct method call</span>
+
+<span class="c1">// Stackless (C++20)</span>
+<span class="n">copp</span><span class="o">::</span><span class="n">generator_channel_sender</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sender</span><span class="p">;</span><span class="w">  </span><span class="c1">// This is a smart pointer</span>
+<span class="n">sender</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w">  </span><span class="c1">// Use -&gt; operator</span>
+</code></pre></div>
+<h3 id="not-handling-errors">Not Handling Errors<a class="headerlink" href="#not-handling-errors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ Without error handling</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">receiver</span><span class="p">;</span><span class="w">  </span><span class="c1">// May return default value on error</span>
+
+<span class="c1">// ✅ With error handling</span>
+<span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">receiver</span><span class="p">,</span><span class="w"> </span><span class="n">sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copp</span><span class="o">::</span><span class="n">make_channel</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">custom_error_transform</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../examples/">Examples</a> - Full working examples</li>
+<li><a href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_13.cpp">sample_readme_13.cpp</a> - Stackful channel examples</li>
+<li><a href="https://github.com/owent/libcopp/blob/v2/sample/sample_readme_14.cpp">sample_readme_14.cpp</a> - C++20 channel examples</li>
+<li><a href="doxygen/html/">API Reference</a> - Detailed API documentation</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/setup_lineno.js"></script>
+      
+    
+  </body>
+</html>

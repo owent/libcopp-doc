@@ -1,0 +1,11 @@
+<map id="stackful_channel_context_base" name="stackful_channel_context_base">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,677,292,1001"/>
+<area shape="rect" id="Node000002" href="$d9/dcc/structstackful__channel__handle__delegate.html" title=" " alt="" coords="5,261,195,615"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,614,136,653,138,661,132,662,131,654,123,615"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,398,379,478"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,479,240,654,238,662,232,661,235,653,285,477"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="211,133,386,199"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="301,199,301,381,296,381,296,199"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="287,5,310,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,71,301,117,296,117,296,71"/>
+</map>

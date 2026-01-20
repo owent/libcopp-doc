@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,267,124,292"/>
+<area shape="rect" id="Node000001" href="$db/d51/structfuture_1_1compact__storage_3_01T_00_01_1_1std_1_1shared__ptr_3_01T_01_4_01_4.html" title=" " alt="" coords="207,5,388,60"/>
+<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="70,253,82,212,102,163,131,113,170,69,205,49,208,53,174,73,136,116,107,165,87,214,75,254"/>
+<area shape="rect" id="Node000002" href="$dc/d15/structfuture_1_1compact__storage_3_01T_00_01LIBCOPP__COPP__NAMESPACE__ID_1_1memory_1_1strong__rc__ptr_3_01T_01_4_01_4.html" title=" " alt="" coords="172,84,423,139"/>
+<area shape="poly" id="edge38_Node000000_Node000002" title=" " alt="" coords="78,253,115,201,141,173,170,149,193,136,196,141,174,154,145,177,120,204,82,257"/>
+<area shape="rect" id="Node000003" href="$d8/d72/structfuture_1_1poll__storage__base.html" title=" " alt="" coords="223,163,372,203"/>
+<area shape="poly" id="edge39_Node000000_Node000003" title=" " alt="" coords="93,257,129,234,171,213,221,196,223,201,173,218,132,239,96,261"/>
+<area shape="rect" id="Node000004" href="$dd/d06/structgsl_1_1detail_1_1is__specialized__span__convertible.html" title=" " alt="" coords="205,227,390,267"/>
+<area shape="poly" id="edge40_Node000000_Node000004" title=" " alt="" coords="137,267,204,257,205,263,138,272"/>
+<area shape="rect" id="Node000005" href="$d0/d0f/structgsl_1_1details_1_1is__comparable__to__nullptr.html" title=" " alt="" coords="196,291,399,331"/>
+<area shape="poly" id="edge41_Node000000_Node000005" title=" " alt="" coords="138,287,196,295,196,300,137,292"/>
+<area shape="rect" id="Node000006" href="$d1/d03/structnostd_1_1____is__nullability__compatible.html" title=" " alt="" coords="194,355,401,395"/>
+<area shape="poly" id="edge42_Node000000_Node000006" title=" " alt="" coords="96,298,132,320,173,341,206,353,205,358,171,346,129,325,93,302"/>
+<area shape="rect" id="Node000007" href="$dd/d53/structstackful__inject__awaitable.html" title=" " alt="" coords="203,419,391,459"/>
+<area shape="poly" id="edge43_Node000000_Node000007" title=" " alt="" coords="82,302,119,355,144,382,173,405,204,420,202,425,171,410,141,386,115,358,77,305"/>
+<area shape="rect" id="Node000008" href="$d9/d62/structtype__traits_1_1is__shared__ptr.html" title=" " alt="" coords="216,483,379,523"/>
+<area shape="poly" id="edge44_Node000000_Node000008" title=" " alt="" coords="76,305,88,342,109,386,137,431,174,469,194,482,216,490,215,495,192,486,170,473,133,435,104,389,84,344,71,306"/>
+</map>

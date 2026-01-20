@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['background_5fblue_0',['BACKGROUND_BLUE',['../d1/d2d/classprint__color_1_1Win32ConsoleColor.html#a3989876d61ea470227aff9d0763d7a3c',1,'print_color::Win32ConsoleColor']]],
+  ['background_5fgreen_1',['BACKGROUND_GREEN',['../d1/d2d/classprint__color_1_1Win32ConsoleColor.html#a82190cebd45b2f11d1c4cb44f2253e86',1,'print_color::Win32ConsoleColor']]],
+  ['background_5fintensity_2',['BACKGROUND_INTENSITY',['../d1/d2d/classprint__color_1_1Win32ConsoleColor.html#abd2ee847c8c748889075c092f27a4c61',1,'print_color::Win32ConsoleColor']]],
+  ['background_5fred_3',['BACKGROUND_RED',['../d1/d2d/classprint__color_1_1Win32ConsoleColor.html#ae56fab81b3abf1163261f5e9351bfd86',1,'print_color::Win32ConsoleColor']]],
+  ['base_4',['base',['../d6/da3/structutil_1_1details_1_1uint64__id__allocator__tls__cache__t.html#a8bf1063923d3f3f0aa19373bcbf1482f',1,'util::details::uint64_id_allocator_tls_cache_t']]],
+  ['basic_5fstackful_5fchannel_5ferror_5ftransform_5',['basic_stackful_channel_error_transform',['../de/d26/stackful__channel__common_8h.html#ae88209807c7329c9c11a2880cdc865f4',1,'stackful_channel_common.h']]],
+  ['bc_5fblack_6',['BC_BLACK',['../d4/da6/classprint__color_1_1print__style.html#ab0a9557acfcd38fb4683e1d12c0e9563',1,'print_color::print_style']]],
+  ['bc_5fblue_7',['BC_BLUE',['../d4/da6/classprint__color_1_1print__style.html#a20b3c0ea8f2bc555d00b88ec45d752b0',1,'print_color::print_style']]],
+  ['bc_5fcyan_8',['BC_CYAN',['../d4/da6/classprint__color_1_1print__style.html#a70e95c2d4d3029c770986363da88f54c',1,'print_color::print_style']]],
+  ['bc_5fgreen_9',['BC_GREEN',['../d4/da6/classprint__color_1_1print__style.html#a34a7c88fe1f24a20d1dd553119a8d4ea',1,'print_color::print_style']]],
+  ['bc_5fmagenta_10',['BC_MAGENTA',['../d4/da6/classprint__color_1_1print__style.html#a2bfe1673053b75a9d407c81b92c1891d',1,'print_color::print_style']]],
+  ['bc_5fred_11',['BC_RED',['../d4/da6/classprint__color_1_1print__style.html#a918518b536b7e2a6f78c4ac2f54f1288',1,'print_color::print_style']]],
+  ['bc_5fwhite_12',['BC_WHITE',['../d4/da6/classprint__color_1_1print__style.html#a8702d98b393325e608c7e66bc7741450',1,'print_color::print_style']]],
+  ['bc_5fyellow_13',['BC_YELLOW',['../d4/da6/classprint__color_1_1print__style.html#aa094d2be71c72c829b9a4742feed1762',1,'print_color::print_style']]],
+  ['before_14',['before',['../d4/d2e/classtest__on__exit__base.html#aa0418266ab5a65b5cee34a164b0773ca',1,'test_on_exit_base']]],
+  ['begin_5fcalled_15',['begin_called',['../db/dbd/namespacestrong__rc_1_1n__spt__another__sp.html#a8bea53675f05ea1d10ae686a80398eab',1,'strong_rc::n_spt_another_sp']]],
+  ['binded_5fobj_16',['binded_obj',['../d6/dd9/structutil_1_1cli_1_1binder_1_1cmd__option__bind__base_1_1help__msg__t.html#a6d3b4cb46eeb6af2e527156e1a7da98e',1,'util::cli::binder::cmd_option_bind_base::help_msg_t']]],
+  ['bk_5flist_17',['bk_list',['../dd/ddf/namespaceprint__color.html#af95c7bde65e232f4380b2cc8bd3b6f5e',1,'print_color']]]
+];

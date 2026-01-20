@@ -1,0 +1,26 @@
+<map id="/home/runner/work/libcopp/libcopp/include/libcopp/utils/spin_lock.h" name="/home/runner/work/libcopp/libcopp/include/libcopp/utils/spin_lock.h">
+<area shape="rect" id="Node000001" title="自旋锁 Licensed under the MIT licenses." alt="" coords="204,5,400,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,357,191,397"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,63,196,85,150,115,109,153,76,197,64,226,62,251,73,309,84,344,79,345,67,310,57,251,59,225,72,195,105,149,147,111,193,81,236,58"/>
+<area shape="rect" id="Node000003" href="$da/dc7/atomic__int__type_8h.html" title="atomic wrapper fo integers Licensed under the MIT licenses." alt="" coords="508,108,659,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="382,58,515,101,513,106,380,63"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="508,131,400,133,277,142,219,151,168,163,127,178,100,198,89,214,82,231,77,270,81,309,89,343,84,345,76,310,72,270,77,230,84,211,96,194,124,174,166,158,218,146,276,137,399,128,508,126"/>
+<area shape="rect" id="Node000004" href="$de/d47/features_8h.html" title=" " alt="" coords="110,203,281,229"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="508,149,261,203,260,198,507,143"/>
+<area shape="rect" id="Node000006" href="$d8/def/explicit__declare_8h.html" title=" " alt="" coords="305,196,483,236"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="543,150,449,193,447,188,541,146"/>
+<area shape="rect" id="Node000007" href="$de/ddb/stl__include__prefix_8h.html" title=" " alt="" coords="507,196,659,236"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="586,148,586,182,581,182,581,148"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="684,203,755,229"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="615,146,691,194,688,198,612,150"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="779,203,849,229"/>
+<area shape="poly" id="edge11_Node000003_Node000009" title=" " alt="" coords="638,146,768,194,774,196,772,201,766,198,636,151"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="873,203,944,229"/>
+<area shape="poly" id="edge12_Node000003_Node000010" title=" " alt="" coords="660,142,757,164,863,193,870,196,869,201,861,199,756,169,659,147"/>
+<area shape="rect" id="Node000011" href="$d4/d4b/stl__include__suffix_8h.html" title=" " alt="" coords="968,196,1119,236"/>
+<area shape="poly" id="edge13_Node000003_Node000011" title=" " alt="" coords="659,139,955,193,954,198,658,145"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="189,230,151,285,116,346,112,344,146,283,184,227"/>
+<area shape="rect" id="Node000005" href="$d8/dc2/errno_8h.html" title=" " alt="" coords="161,284,229,309"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="198,229,198,270,193,270,193,229"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="183,312,134,351,130,347,179,307"/>
+</map>
